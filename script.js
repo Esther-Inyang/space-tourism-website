@@ -3,12 +3,12 @@
 
 //get classes
 const navToggle = document.querySelector('.nav-toggle')
-const links = document.querySelector('.links')
+const menu = document.querySelector('.menu')
 
-//TOGGLE NAV LINKS - ON SMALLER SCREENS
+//TOGGLE NAV menu - ON SMALLER SCREENS
 navToggle.addEventListener("click", function(){
                 // toggle nav
-    links.classList.toggle("show-links")         
+    menu.classList.toggle("show-menu")         
 })
 
 

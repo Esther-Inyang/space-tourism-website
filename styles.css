@@ -1,0 +1,313 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit; 
+}
+
+html{
+    font-size: 62.5%; 
+}
+
+body{
+    box-sizing: border-box;
+    background-image: url("./images/home/background-home-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 1rem;
+    font-family: 'Barlow', sans-serif;
+    position: relative;
+}
+
+fonts{
+    font-family: 'Barlow', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Bellefair', serif;
+}
+
+
+/**********Header-items**********/
+.header-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.logo {
+    height: 4rem;
+}
+
+.hamburger-open,
+.hamburger-close{
+    width: 2.4rem;
+    height: 2.1rem;
+    background-size: 2.4rem 2.1rem;
+    text-indent: -9999px;
+}
+
+.hamburger-open{
+    background: url("./images/shared/icon-hamburger.svg");
+    background-repeat: no-repeat;
+    display: block;
+} 
+
+.hamburger-close{
+    background: url("./images/shared/icon-close.svg");
+    background-repeat: no-repeat;
+    display: none; /*use javascript to toggle*/
+}
+
+/* .hamburger-icon-toggle{
+    display: block
+} */
+
+/* for harmburger-svg Hover */
+.hamburger-open:hover,
+.hamburger-close:hover{
+    transition: all 0.3s linear;
+    filter: brightness(0) invert(1);
+}
+
+.nav-toggle {
+    transition: all .3s linear;
+    cursor: pointer;
+}
+
+/********menu section********/
+.menu {
+    height: 0;
+    overflow: hidden;
+    transition: all .3s ease;
+    background-color: rgba(60, 60, 61, .7); /*changed*/
+    /* background-color: rgba(11, 13, 23, .7); */
+    z-index: 1;
+}
+
+/* for JavaScript */
+.show-menu{
+    height: auto;  /*initially 10rem*/
+}
+
+.menu li{
+    list-style-type: none;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    line-height: 1.6rem;
+    display: block;
+    padding: .6rem 1rem;
+}
+
+.menu li a:hover {
+    padding-left: 1.5rem;
+    transition: all .3s ease-in; 
+    border-bottom: 1px solid #ffffff;
+}
+
+/******Center-contents*******/
+main{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.content-section{
+    padding: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+.about-space__container{
+    padding: 1rem;
+}
+
+.title-intro h5{
+    color: #d0d6f9;
+    font-size: 3rem;
+    margin-top: 5rem;
+    line-height: 4.75px;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+.title-space h1{
+    margin: 5rem 0;
+    color: #ffffff;
+    font-size: 10rem ;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.explore-text{
+    padding: 0 2.6rem;
+}
+
+.explore-text p{
+    color: #d0d6f9;
+    font-size: 2rem;
+}
+
+.explore-link-div{
+    width: 95%;
+    height: 25rem;
+    padding: .5rem;
+    position: relative;
+}
+.explore-link-div a{
+    font-size: 2rem;
+    margin-top: 1rem;
+    color: #0b0d17;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 6rem 2.5rem;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+} 
+
+.explore-link-div a:hover{
+    background-color: #d0d6f9;
+    transition: all .3s linear;
+}
+
+@media screen and (max-width:375px){
+
+    .main{
+        width: 100%;
+    }
+
+    .title-intro h5{  
+        line-height: 3rem; /*changed*/
+        margin-top: 2rem; /*changed*/
+        font-size: 2.8rem; /*changed*/
+        overflow-wrap: break-word; /*changed*/
+        text-align: left; /*changed*/
+    }
+
+    .title-space h1{
+        margin: 2rem 0; /*changed*/
+    }
+
+    .explore-link-div{
+        height: 15rem; /*changed*/
+    }
+
+    .explore-link-div a{
+        margin-top: 2.5rem; /*changed*/
+        padding: 6rem 2.5rem; /*changed*/
+    }
+}
+
+@media screen and (min-width: 768px){
+    body{
+        background-image: url("./images/home/background-home-tablet.jpg");
+    }
+
+    /* main{
+        width: 100%;
+        position: relative;
+        top: 0%;
+        left: 0%;
+        transform: translate(0%, 0%);
+    }  */
+
+    /*header*/
+    header{
+        width: 100%; /*changed*/
+        height: 50px; /*changed*/
+        display: flex; /*changed*/
+        justify-content: space-between; /*changed*/
+        align-items: center; /*changed*/
+        padding-top: 2rem; /*changed*/
+    }
+
+    /*nav*/
+    .hamburger-open,
+    .hamburger-close{
+        display: none; /*changed*/
+    }
+
+    nav{
+        width: 80%; /*changed*/
+        height: 70px; /*changed*/
+        display: flex; /*changed*/
+        flex-direction: column; /*changed*/
+        align-items: flex-end; /*changed*/
+        justify-content: center; /*changed*/
+        padding-top: 2rem; /*changed*/
+    }
+
+    .menu {
+        width: 100%; /*changed*/
+        height: auto; /*changed*/
+        display: flex; /*changed*/
+        justify-content: space-between; /*changed*/
+        align-items: center;/*changed*/
+        padding: 2rem 4rem 3.3rem 4rem; /*changed*/
+    }
+
+    .menu li a {
+        display: block;/*changed*/
+        padding: 2rem .5rem 2rem .5rem; /*changed*/
+        margin-top: 1rem; /*changed*/
+        background-color: rgba(60, 60, 61, .5); /*changed*/
+    }
+
+    .menu li a:hover {
+        padding: 2rem .5rem 1.6rem .5rem; /*changed*/
+        transition: none; /*changed*/
+        border-bottom: 4px solid #ffffff;/*changed*/
+        border-bottom-style: 2rem; /*changed*/
+    }
+
+    .content-section{
+        padding: 48px; /*change*/
+        text-align: center;/*change*/
+        display: flex; /*changed*/
+        justify-content: center; /*changed*/
+        align-items: center; /*changed*/
+        flex-direction: column;
+    }
+
+    .title-intro{
+        margin-top: 15rem;
+    }
+
+    .title-space{
+        margin: 3rem 0; /*changed*/
+    }
+
+    .title-space h1{
+        font-size: 15rem;  /*changed*/
+    }
+    
+    .explore-text{
+        /* width: 400px; changed changed */
+        line-height: 3rem; /*changed*/
+        padding: 0; /*changed*/
+    }
+
+    .explore-text p{   
+        font-size: 3rem; /*changed*/
+        line-height: 5rem; /*changed changed*/
+    }
+
+    .explore-link-div{ 
+        /* width: 30%; changed */
+        /* height: 30rem; changed */
+        /* padding: .5rem; changed */
+        margin-top: 5rem; /*changed*/
+    }
+
+    .explore-link-div a{
+        font-size: 3rem; /*changed*/
+        padding: 11rem 5rem; /*changed*/
+    }
+}

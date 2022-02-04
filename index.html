@@ -6,56 +6,80 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
-  <title>Frontend Mentor | Space tourism website</title>
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
 
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;500;600&family=Barlow:wght@200&family=Bellefair&family" rel="stylesheet">
   
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Frontend Mentor | Space tourism website</title>
 </head>
 <body>
-
-  <!-- Nav -->
-  <nav>
+  <header>
     <!-- nav header -->
-    <div class="nav-header">
-      <img src="./logo.svg" class="logo" alt="logo" />
-      <button class="nav-toggle">
-        <i class="fas fa-bars"></i>
-      </button>
+    <div class="header-items">
+      <div class="logo-div">
+        <img src="./images/shared/logo.svg" class="logo" alt="logo"/>
+      </div>
+      
+      <div class="nav-toggle">
+
+        <div class="hamburger-open"></div>
+
+        <div class="hamburger-close"></div>
+        
+      </div>
     </div>
-    <!-- links -->
-    <ul class="links">
-      <li>
-        <a href="index.html">home</a>
-      </li>
-      <li>
-        <a href="index.html">home</a>
-      </li>
-      <li>
-        <a href="index.html">home</a>
-      </li>
-      <li>
-        <a href="index.html">home</a>
-      </li>
-    </ul>
-  </nav>
+
+    <div class="line"></div>
+    
+    <nav>
+      <!-- menu-links -->
+      <ul class="menu">
+        <li>
+          <a href="index.html">00 Home</a>
+        </li>
+        <li>
+          <a href="destination.html">01 Destination</a>
+        </li>
+        <li>
+          <a href="crew.html">02 Crew</a>
+        </li>
+        <li>
+          <a href="technology.html">03 Technology</a>
+        </li>
+      </ul>
+    </nav>   
+  </header>
+
+  <main>
+    <section class="content-section">
+      <div class="about-space__container">
+        <div class="about-space__titles">
+          <div class="title-intro">
+            <h5>So, you want to travel to</h5>
+          </div>
   
+          <div class="title-space">
+            <h1>space</h1>
+          </div>
+        </div>
+        
 
-<!--   
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+        <div class="explore-text">
+          <p>Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
+        </div>
+      </div>
 
-  So, you want to travel to
-  Space
-  Let’s face it; if you want to go to space, you might as well genuinely go to 
-  outer space and not hover kind of on the edge of it. Well sit back, and relax 
-  because we’ll give you a truly out of this world experience!
+      <!-- <div class="explore-container"> -->
+      <div class="explore-link-div">
+        <a href="destination.html" class="explore">Explore</a>
+      </div>
+    </section>
+  </main>
 
-  Explore -->
   <script src="script.js"></script>
 </body>
 </html>
