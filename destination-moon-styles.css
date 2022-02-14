@@ -16,7 +16,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
-    padding: 1rem;
+    /* padding: 1rem; */
     font-family: 'Barlow', sans-serif;
     position: relative;
 }
@@ -57,12 +57,11 @@ fonts{
 .hamburger-close{
     background: url("./images/shared/icon-close.svg");
     background-repeat: no-repeat;
-    display: none; /*use javascript to toggle*/
+    display: block; /*use javascript to toggle*/
+    position: absolute;
+    right: 0;
+    margin: 2rem;
 }
-
-/* .hamburger-icon-toggle{
-    display: block
-} */
 
 /* for harmburger-svg Hover */
 .hamburger-open:hover,
@@ -77,61 +76,70 @@ fonts{
 }
 
 /********menu section********/
-.menu {
+nav {
+    width: 65%;
     height: 0;
     overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
     transition: all .3s ease;
-    background-color: rgba(60, 60, 61, .7); 
-    /* background-color: rgba(11, 13, 23, .7); */
+    background-color: rgba(51, 55, 70, .92);
     z-index: 1;
 }
 
 /* for JavaScript */
-.show-menu{
-    height: auto;  /*initially 10rem*/
+.show-nav{
+    height: 100%;  
+}
+
+.menu {
+    padding-left: 3rem;
+    margin-top: 8rem;
 }
 
 .menu li{
+    margin-top: 2rem;
     list-style-type: none;
 }
 
-.menu li a {
+.menu-link {
     text-decoration: none;
     color: #ffffff;
     font-size: 1.6rem;
     text-transform: uppercase;
     line-height: 1.6rem;
     display: block;
-    padding: .6rem 1rem;
+    padding: 1rem .2rem; 
+    letter-spacing: .3rem;
+    position: relative;
 }
 
-.menu li a:hover {
-    padding-left: 1.5rem;
+.menu-link:hover {
     transition: all .3s ease-in; 
-    border-bottom: 1px solid #ffffff;
 }
 
-/* ----Content-section----- */
-
-.main{
-    
+.menu-link:hover::after{
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 0.3rem;
+    left: 0;
+    bottom: 0;
+    background-color: #ffffff;
 }
 
+/* *****Content-section***** */
 .section-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem;
-    display: grid;
-    place-items: center;
-}
-
-.section-center{
-    padding: 1rem;
-    display: grid;
-    place-items: center;
-    min-height: 100vh;
 }
 
 .title_pick-desti{
-    /* margin: 2rem 0 1.5rem 0; */
+    margin: 2rem 0 1.5rem 0;
     color: #ffffff;
     font-size: 1.6rem; 
     letter-spacing: 3px;
@@ -143,20 +151,20 @@ fonts{
     font-family: 'Barlow Condensed', sans-serif;
 }
 
-.moon-img{
-    width: 20rem;
-    height: 20rem;
-    /* margin: 1rem 0; */
-}
-
 .number-one{
     color: #a2a3a8;
     font-size: 1.6rem; 
     letter-spacing: 3px;
 }
 
+.moon-img{
+    width: 20rem;
+    height: 20rem;
+    margin: 2rem 0;
+}
+
 .planet-menu{
-    /* margin: 1rem 0 2rem 0; */
+    margin: 1rem 0 2rem 0;
 }
 
 .planet-menu a{
@@ -205,10 +213,15 @@ fonts{
 
 .horizontal-line{
     width: 100%; 
-    height: 2.8px; 
-    /* margin: 1.5rem 0;  */
+    height: .28rem; 
+    margin: 3rem 0; 
     background-color: rgb(162, 163, 168, .1);
     border-radius: 30%; 
+}
+
+.measure-row1,
+.measure-row2{
+    text-align: center;
 }
 
 .title-distance{
@@ -221,7 +234,7 @@ fonts{
 
 .title-km{
     font-weight: 200;
-    /* margin: 1.5rem 0; */
+    margin: 3rem 0; /*changed 1.5*/
     font-size: 3rem;
     color: #ffffff;
     text-transform: uppercase;
@@ -230,7 +243,7 @@ fonts{
 .title-travel{
     font-weight: 200;
     font-size: 1.5rem;
-    letter-spacing: 2px;
+    letter-spacing: 2px; 
     color: #a2a3a8;
     text-transform: uppercase;
 }
@@ -239,29 +252,91 @@ fonts{
     font-weight: 200;
     font-size: 3rem;
     color: #ffffff;
-    margin-top: 1.5rem;
+    margin-top: 3rem; /*changed 1.5*/
     text-transform: uppercase;
 }
 
+@media screen and (max-width:280px){
+    .menu-link{
+        font-size: 1.1rem;
+    } 
+    .number-one,
+    .title_pick-desti{
+        font-size: 1.1rem; 
+    }
+    
+    .planet-menu{
+        margin: 1rem 0;
+    }
 
-@media screen and (max-width:375px){
+    .planet-menu a{
+        font-size: 1.2rem;
+    }
 
+    .title-moon{
+        font-size: 2rem;
+    }
+
+    .moon-text p{
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+
+    .title-distance{
+        font-size: 1.1rem;
+    }
+
+    .title-km{
+        margin: 1.5rem 0; 
+        font-size: 2rem;
+    }
+
+    .title-travel{
+        font-size: 1.1rem;
+    }
+
+    .title-days{
+        font-size: 2rem;
+        margin-top: 1.5rem; 
+    }
 }
 
+@media screen and (max-width:375px){  
+    .moon-img{
+        width: 15rem;
+        height: 15rem;
+    }
+        
+    .title-moon{
+        font-size: 4rem;
+        margin: .5rem 0;
+    }
+     
+    .moon-text p{
+        line-height: 1.5rem;
+    }
+
+    .horizontal-line{
+        margin: 1rem 0; 
+    }
+}
 
 @media screen and (min-width: 768px){
     body{
-        background-image: url("./images/home/background-home-tablet.jpg");
+        background-image: url("./images/destination/background-destination-tablet.jpg");
     }
 
     /*header*/
     header{
         width: 100%; 
-        height: 50px; 
+        height: 5rem;
         display: flex; 
         justify-content: space-between; 
         align-items: center; 
-        padding-top: 2rem; 
+    }
+
+    .header-items{
+        padding: 5rem 0 0 3rem;
     }
 
     /*nav*/
@@ -270,51 +345,138 @@ fonts{
         display: none; 
     }
 
+    .menu-numbers{
+        display: none;
+    }
+
     nav{
-        width: 80%; 
-        height: 70px; 
+        width: 65%; 
+        height: auto; 
         display: flex; 
         flex-direction: column; 
         align-items: flex-end; 
         justify-content: center; 
-        padding-top: 2rem; 
+        padding: 0;
+        transition: none;
+        overflow: none;
+        background-color: rgba(33, 36, 48, 0.92);
     }
 
     .menu {
         width: 100%; 
-        height: auto; 
         display: flex; 
         justify-content: space-between; 
         align-items: center;
-        padding: 2rem 4rem 3.3rem 4rem; 
+        padding: 0 1.5rem 0 1.5rem;
+        margin: 0;
     }
 
-    .menu li a {
-        display: block;
-        padding: 2rem .5rem 2rem .5rem; 
-        margin-top: 1rem; 
-        background-color: rgba(60, 60, 61, .5); 
+    .menu li{
+        margin-top: 0;
     }
 
-    .menu li a:hover {
-        padding: 2rem .5rem 1.6rem .5rem; 
+    .menu-link {
+        padding: 4.5rem 0;
+        line-height: 0;
+        border-bottom: 4px solid transparent;
+    }
+
+    .menu-link:hover {
         transition: none; 
         border-bottom: 4px solid #ffffff;
-        border-bottom-style: 2rem; 
     }
+
+    .menu-link:hover::after{
+        display: none;
+    }
+
+    /* section-center */
+    .section-center{
+        margin-top: 8rem;
+    }
+
+    .number-one{
+        color: #a2a3a8;
+        font-size: 2.4rem; 
+        letter-spacing: 3px;
+    }
+
+    .title_pick-desti{
+        font-size: 2.4rem; 
+        position: absolute;
+        left: 4rem;
+    }
+
+    .moon-img{
+        width: 34rem;
+        height: 34rem;
+        margin: 9rem 0 4rem 0;
+    }
+
+    .planet-menu{
+        margin: 1rem 0 5rem 0;
+    }
+
+    .planet-menu a{
+        font-size: 2.6rem;
+    }
+
+    .title-moon{
+        font-size: 8rem;
+    }
+
+    .moon-text{
+        width: 90%;
+    }
+
+    .moon-text p{
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    .horizontal-line{
+        width: 80%;
+        height: .3rem; 
+        margin: 6rem 0 4rem 0;
+    }
+
+    .measurement-div{
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .measure-row1,
+    .measure-row2{
+        width: 50%;
+        height: 20px;
+    }
+
+    .title-km{
+        margin: 2rem 0; 
+    }
+
+    .title-travel{
+        text-transform: uppercase;
+    }
+
+    .title-days{
+        margin-top: 2rem;
+    }
+
 }
 
 
 @media screen and (min-width: 992px){
-    /*Styles for HOME (Index.html)*/
     body{
         padding: 0;
-        background-image: url("./images/home/background-home-desktop.jpg");
+        background-image: url("./images/destination/background-destination-desktop.jpg");
     }
 
     .line{
         width: 45%; 
-        height: 1px; 
+        height: 1px;  
         margin-top: 2rem; 
         background-color: #a2a3a8; 
         z-index: 1000; 
@@ -325,3 +487,5 @@ fonts{
         width: 45%; 
     }
 }
+
+

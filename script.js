@@ -3,12 +3,27 @@
 
 //get classes
 const navToggle = document.querySelector('.nav-toggle')
-const menu = document.querySelector('.menu')
+const nav = document.querySelector('.nav')
+const hamburgerClose = document.querySelector('.hamburger-close')
+const hamburgerOpen = document.querySelector('.hamburger-open')
 
 //TOGGLE NAV menu - ON SMALLER SCREENS
 navToggle.addEventListener("click", function(){
                 // toggle nav
-    menu.classList.toggle("show-menu")         
+    // nav.classList.toggle("show-nav")
+    nav.classList.add("show-nav")  
+    hamburgerOpen.style.display = "none";
 })
 
+hamburgerClose.addEventListener("click",function(){
+    nav.classList.remove("show-nav")
+    hamburgerOpen.style.display = "block";
+})
 
+//slider
+const workers = [
+    {
+     name: "James Lee",
+     Job: "Pilot",
+    },
+]
