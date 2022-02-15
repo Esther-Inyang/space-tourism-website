@@ -130,7 +130,7 @@ nav {
 }
 
 /* *****Content-section***** */
-.section-center{
+.contents{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -173,7 +173,7 @@ nav {
     text-transform: uppercase;
     font-weight: 500;
     font-size: 1.5rem;
-    margin: 0 1rem 0 1rem;
+    margin: 0 2rem 0 0;
     padding: .7rem 0;
     position: relative;
 }
@@ -390,8 +390,8 @@ nav {
         display: none;
     }
 
-    /* section-center */
-    .section-center{
+    /* contents */
+    .contents{
         margin-top: 8rem;
     }
 
@@ -475,16 +475,115 @@ nav {
     }
 
     .line{
-        width: 45%; 
-        height: 1px;  
-        margin-top: 2rem; 
-        background-color: #a2a3a8; 
-        z-index: 1000; 
-        margin-right: -10rem; 
+        width: 30%; 
+        height: 1px; 
+        margin-top: 7rem;  
+        z-index: 999; 
+        position: absolute;
+        left: 15rem;
+        background-color: rgb(89, 90, 95);
+        /* margin-right: -10rem;  */
     }
 
     nav{
-        width: 45%; 
+        width: 60%; 
+        padding: 0 9rem;
+        margin-top: 3rem;
+    }
+
+    .menu-numbers{
+        display: inline-block;
+    }
+
+    .menu-link {
+        padding: 3rem 0;
+        font-size: 1.3rem;
+        margin-right: 1.5rem;
+    }
+
+    /*contents*/
+    .contents{
+        /* display: flex; */
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        /* padding: 1rem; */
+        margin-top: 5rem;
+    }
+
+    .section1{
+        width: 55%;
+        height: auto;
+        text-align: center;
+    }
+
+    .section2{
+        width: 43%;
+    }
+
+    .title_pick-desti{
+        width: 80%;
+        font-size: 2.4rem; 
+        position: relative;
+        top: 5rem;
+        text-align: center;
+    }
+
+    .moon-image-div{
+        margin-top: 3rem;
+    }
+
+    .moon-img{
+        width: 30rem;
+        height: 30rem;
+    }
+
+    .planet-menu{
+        margin-top: 7rem;
+        margin-bottom: 4rem;
+    }
+
+    .planet-menu a{
+        font-size: 1.3rem;  
+    }
+
+    .title-moon{
+        font-size: 5.5rem;
+    }
+
+    .moon-text{
+        width: 65%;
+        text-align: left;
+    }
+
+    .moon-text p{
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+
+    .horizontal-line{
+        width: 65%;
+        margin: 5rem 0 2rem 0;
+    }
+
+    .measurement-div{
+        width: 65%;
+    }
+
+    .measure-row1,
+    .measure-row2{
+        text-align: left;
+    }
+
+    .title-distance,
+    .title-travel{
+        font-size: 1.2rem;
+    }
+
+    .title-km,
+    .title-days{ 
+        font-size: 1.8rem;
+        margin-top: 1.5rem
     }
 }
 

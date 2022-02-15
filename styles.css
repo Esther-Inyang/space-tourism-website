@@ -138,7 +138,7 @@ main{
     left: 50%;
     transform: translate(-50%,-50%);
 }
-.content-section{
+.contents{
     padding: 1rem;
     margin-top: 1rem;
     text-align: center;
@@ -294,7 +294,7 @@ main{
     }
 
     /* center */
-    .content-section{
+    .contents{
         padding: 4.8rem; 
         text-align: center;
         display: flex; 
@@ -370,7 +370,7 @@ main{
 
     .menu-numbers{
         display: inline-block;
-    }
+    } 
 
     .menu-link {
         padding: 3rem 0;
@@ -378,8 +378,8 @@ main{
         margin-right: 1.5rem;
     }
 
-    /*content-section*/
-    .content-section{
+    /*contents*/
+    .contents{
         padding: 48px; 
         text-align: left;
         flex-direction: row;
