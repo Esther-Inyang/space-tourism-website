@@ -106,7 +106,7 @@ nav {
 .menu-link {
     text-decoration: none;
     color: #ffffff;
-    font-size: 1.6rem;
+    font-size: 1.1rem;
     text-transform: uppercase;
     line-height: 1.6rem;
     display: block;
@@ -138,14 +138,25 @@ nav {
     padding: 1rem;
 }
 
+.section1,
+.section2{
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.title-div{
+    width: 95%;
+    margin: 2rem auto 1rem auto;
+    text-align: center;
+}
+
 .title_pick-desti{
-    margin: 2rem 0 1.5rem 0;
     color: #ffffff;
-    font-size: 1.6rem; 
+    font-size: 1rem; 
     letter-spacing: 3px;
     line-height: 4.75px;
     overflow-wrap: break-word; 
-    text-align: left; 
     font-weight: lighter;
     text-transform: uppercase;
     font-family: 'Barlow Condensed', sans-serif;
@@ -153,18 +164,18 @@ nav {
 
 .number-one{
     color: #a2a3a8;
-    font-size: 1.6rem; 
+    font-size: 1.1rem; 
     letter-spacing: 3px;
 }
 
 .moon-img{
-    width: 20rem;
-    height: 20rem;
+    width: 19rem;
+    height: 19rem;
     margin: 2rem 0;
 }
 
 .planet-menu{
-    margin: 1rem 0 2rem 0;
+    margin: 1rem 0;
 }
 
 .planet-menu a{
@@ -172,10 +183,13 @@ nav {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 1.5rem;
-    margin: 0 2rem 0 0;
+    font-size: 1.2rem;
     padding: .7rem 0;
     position: relative;
+}
+
+.planet-menu > a:not(:last-child){
+    margin: 0 2rem 0 0;
 }
 
 .planet-menu a:hover {
@@ -193,7 +207,7 @@ nav {
 }
 
 .title-moon{
-    font-size: 5rem;
+    font-size: 3rem;
     color: #ffffff;
     text-transform: uppercase;
     font-weight: lighter;
@@ -201,20 +215,19 @@ nav {
 }
 
 .moon-text{
-    width: 80%;
     text-align: center;
 }
 
 .moon-text p{
-    font-size: 1.3rem;
     color: #a2a3a8;
-    line-height: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
 }
 
 .horizontal-line{
     width: 100%; 
     height: .28rem; 
-    margin: 3rem 0; 
+    margin: 1.5rem 0; 
     background-color: rgb(162, 163, 168, .1);
     border-radius: 30%; 
 }
@@ -226,7 +239,7 @@ nav {
 
 .title-distance{
     letter-spacing: 2px;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     color: #a2a3a8;
     font-weight: 200;
     text-transform: uppercase;
@@ -234,15 +247,15 @@ nav {
 
 .title-km{
     font-weight: 200;
-    margin: 3rem 0; /*changed 1.5*/
-    font-size: 3rem;
+    margin: 1.5rem 0; 
+    font-size: 2rem;
     color: #ffffff;
     text-transform: uppercase;
 }
 
 .title-travel{
     font-weight: 200;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     letter-spacing: 2px; 
     color: #a2a3a8;
     text-transform: uppercase;
@@ -250,80 +263,62 @@ nav {
 
 .title-days{
     font-weight: 200;
-    font-size: 3rem;
-    color: #ffffff;
-    margin-top: 3rem; /*changed 1.5*/
+    font-size: 2rem;
+    margin-top: 1.5rem; 
+    color: #ffffff; 
     text-transform: uppercase;
 }
 
-@media screen and (max-width:280px){
+@media screen and (min-width: 390px){
     .menu-link{
-        font-size: 1.1rem;
-    } 
+        font-size: 1.6rem;
+    }
+
     .number-one,
     .title_pick-desti{
-        font-size: 1.1rem; 
+        font-size: 1.3rem;
     }
     
-    .planet-menu{
-        margin: 1rem 0;
+    .planet-menu{   
+        margin: 1rem 0 3rem 0;
     }
 
     .planet-menu a{
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .title-moon{
-        font-size: 2rem;
+        font-size: 5rem;
     }
 
     .moon-text p{
-        font-size: 1rem;
-        line-height: 1rem;
+        font-size: 1.3rem;
+        line-height: 2rem;
     }
 
     .title-distance{
-        font-size: 1.1rem;
+        font-size: 1.5rem;
     }
 
     .title-km{
-        margin: 1.5rem 0; 
-        font-size: 2rem;
+        margin: 3rem 0; 
+        font-size: 3rem;
     }
 
     .title-travel{
-        font-size: 1.1rem;
+        font-size: 1.5rem;
     }
 
     .title-days{
-        font-size: 2rem;
-        margin-top: 1.5rem; 
-    }
-}
-
-@media screen and (max-width:375px){  
-    .moon-img{
-        width: 15rem;
-        height: 15rem;
-    }
-        
-    .title-moon{
-        font-size: 4rem;
-        margin: .5rem 0;
-    }
-     
-    .moon-text p{
-        line-height: 1.5rem;
-    }
-
-    .horizontal-line{
-        margin: 1rem 0; 
+        font-size: 3rem;
+        margin-top: 3rem;
     }
 }
 
 @media screen and (min-width: 768px){
     body{
         background-image: url("./images/destination/background-destination-tablet.jpg");
+        min-height: 100vh;
     }
 
     /*header*/
@@ -395,22 +390,31 @@ nav {
         margin-top: 8rem;
     }
 
+    .section2{
+        display: grid;
+        place-items: center;
+    }
+
+    .title-div{
+        width: 100%;
+        margin: 2rem 0 5rem 0;
+        text-align: left;
+    }
+
+    .title_pick-desti{
+        font-size: 2.2rem;
+    }
+
     .number-one{
         color: #a2a3a8;
         font-size: 2.4rem; 
         letter-spacing: 3px;
     }
 
-    .title_pick-desti{
-        font-size: 2.4rem; 
-        position: absolute;
-        left: 4rem;
-    }
-
     .moon-img{
-        width: 34rem;
-        height: 34rem;
-        margin: 9rem 0 4rem 0;
+        width: 25rem;
+        height: 25rem;
+        margin: 0 0 4rem 0;
     }
 
     .planet-menu{
@@ -426,12 +430,12 @@ nav {
     }
 
     .moon-text{
-        width: 90%;
+        width: 100%;
     }
 
     .moon-text p{
-        font-size: 2rem;
-        line-height: 3rem;
+        font-size: 2.1rem;
+        line-height: 3.2rem;
     }
 
     .horizontal-line{
@@ -482,7 +486,6 @@ nav {
         position: absolute;
         left: 15rem;
         background-color: rgb(89, 90, 95);
-        /* margin-right: -10rem;  */
     }
 
     nav{
@@ -503,11 +506,9 @@ nav {
 
     /*contents*/
     .contents{
-        /* display: flex; */
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        /* padding: 1rem; */
         margin-top: 5rem;
     }
 
@@ -515,17 +516,18 @@ nav {
         width: 55%;
         height: auto;
         text-align: center;
+        display: block;
     }
 
     .section2{
         width: 43%;
+        display: block;
+        text-align: left;
     }
 
-    .title_pick-desti{
-        width: 80%;
-        font-size: 2.4rem; 
-        position: relative;
-        top: 5rem;
+    .title-div{
+        width: 95%;
+        margin: 6rem auto 6rem auto;
         text-align: center;
     }
 

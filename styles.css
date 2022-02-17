@@ -94,7 +94,7 @@ nav {
 }
 
 .menu {
-    padding-left: 3rem;
+    padding-left: 1.5rem;
     margin-top: 8rem;
 }
 
@@ -107,7 +107,7 @@ nav {
 .menu-link {
     text-decoration: none;
     color: #ffffff;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     text-transform: uppercase;
     line-height: 1.6rem;
     display: block;
@@ -130,49 +130,50 @@ nav {
     background-color: #ffffff;
 }
 
-/******Center-contents*******/
-main{
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+/******contents*******/
+.main{
+    display: grid;
+    align-items: center;
 }
+
 .contents{
     padding: 1rem;
     margin-top: 1rem;
     text-align: center;
 }
+
 .about-space__container{
     padding: 1rem;
 }
 
 .title-intro h5{
     color: #d0d6f9;
-    font-size: 3rem;
-    margin-top: 5rem;
+    font-size: 2rem;
+    margin-top: 2rem;
     line-height: 4.75px;
     font-family: 'Barlow Condensed', sans-serif;
 }
+
 .title-space h1{
-    margin: 5rem 0;
+    margin: 4rem 0;
     color: #ffffff;
-    font-size: 10rem ;
+    font-size: 8rem ;
     font-family: 'Barlow Condensed', sans-serif;
 }
 
 .explore-text{
-    padding: 0 2.6rem;
+    padding: 0 .2rem;
 }
 
 .explore-text p{
     color: #d0d6f9;
-    font-size: 2rem;
+    font-size: 1.4rem;
+    line-height: 1.6;
 }
 
 .explore-link-div{
     width: 95%;
-    height: 25rem;
+    height: 21rem;
     padding: .5rem;
     position: relative;
 }
@@ -196,31 +197,34 @@ main{
     transition: all .3s linear;
 }
 
-@media screen and (max-width:375px){
-
-    .main{
-        width: 100%;
+@media screen and (min-width: 390px){
+    .menu-link {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 1.6rem;
     }
-
-    .title-intro h5{  
-        line-height: 3rem; 
-        margin-top: 2rem; 
-        font-size: 2.8rem; 
-        overflow-wrap: break-word; 
-        text-align: left; 
+    
+    .title-intro h5{
+        font-size: 3rem;
+        margin-top: 5rem;
     }
 
     .title-space h1{
-        margin: 2rem 0; 
+        font-size: 11rem;
+        margin: 5rem 0;
+    }
+
+    .explore-text{
+        padding: 0 .6rem;
+    }
+    
+    .explore-text p{
+        font-size: 2rem;
     }
 
     .explore-link-div{
-        height: 15rem; 
-    }
-
-    .explore-link-div a{
-        margin-top: 2.5rem; 
-        padding: 6rem 2.5rem; 
+        width: 95%;
+        height: 25rem;
     }
 }
 
@@ -253,7 +257,7 @@ main{
     }
 
     nav{
-        width: 65%; 
+        width: 60%; 
         height: auto; 
         display: flex; 
         flex-direction: column; 
@@ -279,7 +283,8 @@ main{
     }
 
     .menu-link {
-        padding: 4.5rem 0;
+        font-size: 1.2rem;
+        padding: 3.5rem 0;
         line-height: 0;
         border-bottom: 4px solid transparent;
     }
@@ -304,14 +309,11 @@ main{
     }
 
     .title-intro{
-        margin-top: 15rem;
-    }
-
-    .title-space{
-        margin: 3rem 0; 
+        margin-top: 8rem;
     }
 
     .title-space h1{
+        margin: 2rem 0 3rem 0;
         font-size: 15rem;  
     }
     
@@ -326,7 +328,7 @@ main{
     }
 
     .explore-link-div{ 
-        margin-top: 5rem; 
+        margin-top: 2rem; 
     }
 
     .explore-link-div a{
@@ -337,6 +339,7 @@ main{
 
 @media screen and (min-width: 992px){
     /*Styles for HOME (Index.html)*/
+
     body{
         padding: 0;
         background-image: url("./images/home/background-home-desktop.jpg");
@@ -347,24 +350,22 @@ main{
     }
 
     .header-items{
-        width: 10%;
+        width: 7%;
         padding: 5rem 0 0 3rem;
     }
 
     .line{
-        width: 30%; 
+        width: 33%; 
         height: 1px; 
-        margin-top: 7rem;  
         z-index: 999; 
         position: absolute;
-        left: 15rem;
+        top: 6rem;
+        left: 12rem;
         background-color: rgb(89, 90, 95);
-        /* margin-right: -10rem;  */
     }
 
     nav{
-        width: 60%; 
-        padding: 0 9rem;
+        padding: 0 5rem; 
         margin-top: 3rem;
     }
 
@@ -372,10 +373,16 @@ main{
         display: inline-block;
     } 
 
+    .menu{
+        min-width: 80%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
     .menu-link {
         padding: 3rem 0;
         font-size: 1.3rem;
-        margin-right: 1.5rem;
+        margin-right: 0;
     }
 
     /*contents*/
@@ -392,7 +399,7 @@ main{
     }
 
     .title-intro{
-        margin-top: 22rem;
+        margin-top: 18rem;
     }
 
     .title-space{
