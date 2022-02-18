@@ -168,7 +168,7 @@ nav {
     letter-spacing: 3px;
 }
 
-.moon-img{
+.mars-img{
     width: 16rem;
     height: 16rem;
     margin: 2rem 0 1rem 0;
@@ -206,7 +206,7 @@ nav {
     background-color: #ffffff;
 }
 
-.title-moon{
+.title-mars{
     font-size: 3rem;
     color: #ffffff;
     text-transform: uppercase;
@@ -215,13 +215,13 @@ nav {
     margin-bottom: 1rem;
 }
 
-.moon-text{
-    width: 100%;
+.mars-text{
+    width: 80%;
     margin: 0 auto;
     text-align: center;
 }
 
-.moon-text p{
+.mars-text p{
     color: #a2a3a8;
     font-size: 1.2rem;
     line-height: 1.6rem;
@@ -230,7 +230,7 @@ nav {
 .horizontal-line{
     width: 100%; 
     height: .28rem; 
-    margin: 2.3rem 0; 
+    margin: 2.2rem 0; 
     background-color: rgb(162, 163, 168, .1);
     border-radius: 30%; 
 }
@@ -281,7 +281,7 @@ nav {
     .page-title{
         font-size: 1.3rem;
     }
-
+ 
     .mars-img{
         width: 20rem;
         height: 20rem;
@@ -291,20 +291,16 @@ nav {
     .planet-menu{   
         margin: 1rem 0 4rem 0;
     }
-    
-    .planet-menu{   
-        margin: 1rem 0 2.5rem 0;
-    }
 
     .planet-menu a{
         font-size: 1.5rem;
     }
 
-    .title-moon{
+    .title-mars{
         font-size: 5rem;
     }
 
-    .moon-text p{
+    .mars-text p{
         font-size: 1.3rem;
         line-height: 2rem;
     }
@@ -325,6 +321,32 @@ nav {
     .travel-time{
         font-size: 3rem;
         margin-top: 3rem;
+    }
+}
+
+@media screen and (min-width: 540px){
+    .mars-img{
+        margin-bottom: 1rem;
+    }
+
+    .planet-menu{   
+        margin: .5rem 0 2rem 0;
+    }
+
+    .title-mars{
+        margin-bottom: .5rem;
+    }
+
+    .horizontal-line{
+        margin: 1.5rem 0;
+    }
+
+    .title-km{
+        margin: 1.5rem 0;
+    }
+
+    .travel-time{
+        margin: 1.5rem 0 .5rem 0;
     }
 }
 
@@ -424,7 +446,7 @@ nav {
         letter-spacing: 3px;
     }
 
-    .moon-img{
+    .mars-img{
         width: 25rem;
         height: 25rem;
         margin: 0 0 4rem 0;
@@ -438,15 +460,15 @@ nav {
         font-size: 2.6rem;
     }
 
-    .title-moon{
+    .title-mars{
         font-size: 8rem;
     }
 
-    .moon-text{
+    .mars-text{
         width: 97%;
     }
 
-    .moon-text p{
+    .mars-text p{
         font-size: 2.1rem;
         line-height: 4rem;
     }
@@ -483,7 +505,6 @@ nav {
     }
 
 }
-
 
 @media screen and (min-width: 992px){
     body{
@@ -544,11 +565,11 @@ nav {
         text-align: center;
     }
 
-    .moon-image-div{
+    .mars-image-div{
         margin-top: 3rem;
     }
 
-    .moon-img{
+    .mars-img{
         width: 30rem;
         height: 30rem;
     }
@@ -562,17 +583,17 @@ nav {
         font-size: 1.3rem;  
     }
 
-    .title-moon{
+    .title-mars{
         font-size: 5.5rem;
     }
 
-    .moon-text{
+    .mars-text{
         width: 65%;
         text-align: left;
         margin: 0;
     }
 
-    .moon-text p{
+    .mars-text p{
         font-size: 1.5rem;
         line-height: 2.5rem;
     }
@@ -609,6 +630,6 @@ nav {
     }
 
     .line{
-        width: 27%;  
+        width: 27%; 
     }
 }
