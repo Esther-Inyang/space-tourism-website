@@ -27,3 +27,15 @@ const workers = [
      Job: "Pilot",
     },
 ]
+
+//for active planet-menu
+const menu = document.querySelector(".menu")
+const menuLinks = document.querySelectorAll(".menu-link")
+
+menuLinks.forEach((menuLink)=>{
+    menuLink.addEventListener("click", ()=>{
+        menu.querySelector(".active").classList.remove("active")
+        menuLink.classList.add("active");
+    })
+    
+})

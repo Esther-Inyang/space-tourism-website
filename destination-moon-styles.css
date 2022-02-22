@@ -178,7 +178,7 @@ nav {
     margin: 1rem 0 2.8rem 0;
 }
 
-.planet-menu a{
+.planet-link{
     color: #a2a3a8;
     text-decoration: none;
     text-transform: uppercase;
@@ -192,11 +192,11 @@ nav {
     margin: 0 2rem 0 0;
 }
 
-.planet-menu a:hover {
+.planet-link:hover {
     color: #ffffff;
 }
 
-.planet-menu a:hover::after{
+.planet-link:hover::after{
     content: '';
     position: absolute;
     width: 70%;
@@ -272,6 +272,27 @@ nav {
     text-transform: uppercase;
 }
 
+.active::after{
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 0.3rem;
+    left: 0;
+    bottom: 0;
+    background-color: #ffffff;
+}
+
+/* 
+.active::after{
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 0.3rem;
+    left: 0;
+    bottom: 0;
+    background-color: #ffffff;
+} */
+
 @media screen and (min-width: 390px){
     .menu-link{
         font-size: 1.6rem;
@@ -296,7 +317,7 @@ nav {
         margin: 1rem 0 2.5rem 0;
     }
 
-    .planet-menu a{
+    .planet-link{
         font-size: 1.5rem;
     }
 
@@ -434,7 +455,7 @@ nav {
         margin: 1rem 0 5rem 0;
     }
 
-    .planet-menu a{
+    .planet-link{
         font-size: 2.6rem;
     }
 
@@ -558,7 +579,7 @@ nav {
         margin-bottom: 4rem;
     }
 
-    .planet-menu a{
+    .planet-link{
         font-size: 1.3rem;  
     }
 
