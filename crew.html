@@ -4,41 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;500;600&family=Barlow:wght@200&family=Bellefair&family" rel="stylesheet">
 
-  <link rel="stylesheet" href="crew-commander-styles.css">
+  <link rel="stylesheet" href="crew-style.css">
 
   <title>Frontend Mentor | Space tourism website</title>
 </head>
 <body>
   <main>
     <section class="crew-section">
-      <div class="page-title-div">
-        <h5 class="page-title">
-          <span class="page-title-number">02</span>
+      <div class="crew-page-title_container">
+        <h5 class="crew-page-title">
+          <span class="crew-page-title_number">02</span>
           Meet Your Crew
         </h5>
       </div>
 
       <div class="crew-slider_container">
         <div class="crew-image_container">
-          <picture>
+          <!-- <picture>
             <source type="image/webp" srcset="./images/crew/image-douglas-hurley.webp" 280w>
             
-            <img src="./images/crew/image-douglas-hurley.png" alt="image of a crew commander" class="crew-img1"/>
-          </picture>
+            
+          </picture> -->
+
+          <img src="./images/crew/image-douglas-hurley.png" alt="image of a crew member" class="crew-img"/>
         </div>
   
         <div class="crew-contents">
           <div class="crew-btns_container">
-            <button class="btn active-crew"></button>
-            <button class="btn"></button>
-            <button class="btn"></button>
-            <button class="btn"></button>
+            <button class="crew-btn crew-btn1 active-crew"></button>
+            <button class="crew-btn crew-btn2"></button>
+            <button class="crew-btn crew-btn3"></button>
+            <button class="crew-btn crew-btn4"></button>
           </div>
     
           <div class="crew-text_container">
@@ -52,5 +54,7 @@
       </div>
     </section>
   </main>
+
+  <script src="script.js"></script>
 </body>
 </html>

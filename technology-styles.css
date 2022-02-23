@@ -28,13 +28,13 @@ fonts{
 
 /* Global styles */
 
-.page-title-div{
+.tech-page-title_container{
     width: 95%;
     margin: 2rem auto 3rem auto; /*changed bottom from 1rem*/
     text-align: center;
 }
 
-.page-title{
+.tech-page-title{
     color: #ffffff;
     font-size: 1.5rem; 
     letter-spacing: 3px;
@@ -45,7 +45,7 @@ fonts{
     font-family: 'Barlow Condensed', sans-serif;
 }
 
-.page-title-number{
+.tech-page-title_number{
     color: #a2a3a8;
     font-size: 1.1rem; 
     letter-spacing: 3px;
@@ -61,7 +61,7 @@ fonts{
     background-position: center;
 }
 
-.technology-btns_container{
+.tech-btns_container{
     width: 80%;
     margin: 3rem auto 1.5rem;
     display: flex;
@@ -70,7 +70,7 @@ fonts{
     justify-content: center;
 }
 
-.btn{
+.tech-btn{
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 50%;
@@ -82,7 +82,7 @@ fonts{
     border: 1px solid rgb(162, 163, 168, 0.5);
 }
 
-.btn:hover{
+.tech-btn:hover{
     color: #000000;
     background-color: #ffffff;
 }
@@ -142,16 +142,16 @@ fonts{
        
     }
 
-    .page-title-div{
+    .tech-page-title_container{
         text-align: left;
         margin-top: 3rem;
     }
         
-    .page-title-number{
+    .tech-page-title_number{
         font-size: 2rem; 
     }
 
-    .page-title{
+    .tech-page-title{
         font-size: 2rem;
         font-weight: 600; 
     }
@@ -167,7 +167,7 @@ fonts{
         height: 35rem;
     }
 
-    .btn{
+    .tech-btn{
         width: 4.5rem;
         height: 4.5rem;
         margin-top: 2rem;
@@ -195,12 +195,12 @@ fonts{
         background-image: url("./images/technology/background-technology-desktop.jpg");
     }
 
-    .page-title-div{
+    .tech-page-title_container{
         margin-top: 4rem;
     }
 
-    .page-title-number,
-    .page-title{
+    .tech-page-title_number,
+    .tech-page-title{
         font-size: 2.5rem;
     }
 
@@ -233,7 +233,7 @@ fonts{
         flex-basis: 65%;
     }
 
-    .technology-btns_container{
+    .tech-btns_container{
         margin: 0;
         flex-direction: column;
         justify-content: flex-start;
@@ -243,7 +243,7 @@ fonts{
         text-align: left;
     }
 
-    .technology-btns_container,
+    .tech-btns_container,
     .technology-title{
         margin-top: 8rem;
     }

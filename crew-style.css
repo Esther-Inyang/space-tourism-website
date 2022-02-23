@@ -28,13 +28,13 @@ fonts{
 
 /* Global styles */
 
-.page-title-div{
+.crew-page-title_container{
     width: 95%;
     margin: 2rem auto 1rem auto; 
     text-align: center;
 }
 
-.page-title{
+.crew-page-title{
     color: #ffffff;
     font-size: 1.3rem; 
     letter-spacing: 3px;
@@ -45,7 +45,7 @@ fonts{
     font-family: 'Barlow Condensed', sans-serif;
 }
 
-.page-title-number{
+.crew-page-title_number{
     color: #a2a3a8;
     font-size: 1.1rem; 
     letter-spacing: 3px;
@@ -59,7 +59,7 @@ fonts{
     border-bottom: 1px solid rgb(162, 163, 168, 0.5);
 }
 
-.crew-img1{
+.crew-img{
     width: 22rem;
     height: 25rem;
 }
@@ -73,7 +73,7 @@ fonts{
     justify-content: center;
 }
 
-.btn{
+.crew-btn{
     width: 1.4rem;
     height: 1.4rem;
     border-radius: 50%;
@@ -82,7 +82,7 @@ fonts{
     background-color: #a2a3a8;
 }
 
-.btn:hover{
+.crew-btn:hover{
     background-color: #ffffff;
 }
 
@@ -119,7 +119,7 @@ fonts{
 }
 
 @media screen and (min-width: 390px){
-    .crew-img1{
+    .crew-img{
         width: 25rem;
         height: 35rem;
     }
@@ -144,16 +144,16 @@ fonts{
         padding: 2rem;
     }
 
-    .page-title-div{
+    .crew-page-title_container{
         text-align: left;
         margin-top: 3rem;
     }
         
-    .page-title-number{
+    .crew-page-title_number{
         font-size: 2rem; 
     }
 
-    .page-title{
+    .crew-page-title{
         font-size: 2rem;
         font-weight: 600; 
     }
@@ -170,7 +170,7 @@ fonts{
         padding-bottom: 0;
     }
 
-    .crew-img1{
+    .crew-img{
         width: 50rem;
         height: 55rem;
         position: absolute;
@@ -200,12 +200,12 @@ fonts{
         background-image: url("./images/crew/background-crew-desktop.jpg");
     }
 
-    .page-title-div{
+    .crew-page-title_container{
         margin-top: 7rem;
     }
 
     .crew-section{
-        padding: 0 5rem 0 15rem;
+        padding: 0 2rem 0 15rem;
     }
 
     .crew-slider_container{
@@ -215,12 +215,16 @@ fonts{
         gap: 2rem;
     }
 
-    .crew-image_container,
+   
     .crew-contents{
-        flex-basis: 47%;
+        flex-basis: 60%;
     }
 
-    .crew-img1{
+    .crew-image_container{
+        flex-basis: 30%;
+    }
+
+    .crew-img{
         width: 40rem;
         height: 55rem;
     }
