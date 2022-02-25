@@ -20,6 +20,8 @@
 //     hamburgerOpen.style.display = "block";
 // })
 
+//*************DESTINATION-SECTION**************//
+
 // //for active planet-menu
 // const menu = document.querySelector(".menu")
 // const menuLinks = document.querySelectorAll(".menu-link")
@@ -32,9 +34,9 @@
     
 // })
 
-//SLIDER - FOR CREW SECTION
+//*************CREW-SECTION**************//
 
-//Array of Crews
+//Array of Crew Members
 const crews = [
     {
         id: 1,
@@ -79,18 +81,7 @@ const crewBtn2 = document.querySelector(".crew-btn2")
 const crewBtn3 = document.querySelector(".crew-btn3")
 const crewBtn4 = document.querySelector(".crew-btn4")
 
-//The crew position in the array
-let currentCrew = 0;
-
-//As soon as page loads, show a crew
-window.addEventListener("DOMContentLoaded", function(){
-    console.log("hi crew")
-
-    // showCrew();
-})
-   
-// const crew = crews[currentCrew];
-
+//for each crew member in the array
 function crewOne(){
     crewImg.src = crews[0].img;
     crewTitle.textContent = crews[0].title;
@@ -104,6 +95,7 @@ function crewTwo(){
     crewName.textContent = crews[1].name;
     crewText.textContent = crews[1].text;
 }
+
 
 function crewThree(){
     crewImg.src = crews[2].img;
@@ -119,7 +111,7 @@ function crewFour(){
     crewText.textContent = crews[3].text;
 }
 
-//button one
+//buttons
 crewBtn1.addEventListener("click",()=>{
     crewOne()
 })
@@ -136,7 +128,7 @@ crewBtn4.addEventListener("click",()=>{
     crewFour()
 })
 
-//change active 
+//change active button
 const crewBtnContainer = document.querySelector(".crew-btns_container")
 const allCrewBtns = document.querySelectorAll(".crew-btn")
 
