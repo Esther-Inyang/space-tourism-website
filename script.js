@@ -1,24 +1,25 @@
 
+/////////////////////////HOME///////////////////////////
 // toggle - toggles class
 
 //get classes
-// const navToggle = document.querySelector('.nav-toggle')
-// const nav = document.querySelector('.nav')
-// const hamburgerClose = document.querySelector('.hamburger-close')
-// const hamburgerOpen = document.querySelector('.hamburger-open')
+const navToggle = document.querySelector('.nav-toggle')
+const nav = document.querySelector('.nav')
+const hamburgerClose = document.querySelector('.hamburger-close')
+const hamburgerOpen = document.querySelector('.hamburger-open')
 
-// //TOGGLE NAV menu - ON SMALLER SCREENS
-// navToggle.addEventListener("click", function(){
-//                 // toggle nav
-//     // nav.classList.toggle("show-nav")
-//     nav.classList.add("show-nav")  
-//     hamburgerOpen.style.display = "none";
-// })
+//TOGGLE NAV menu - ON SMALLER SCREENS
+navToggle.addEventListener("click", function(){
+                // toggle nav
+    // nav.classList.toggle("show-nav")
+    nav.classList.add("show-nav")  
+    hamburgerOpen.style.display = "none";
+})
 
-// hamburgerClose.addEventListener("click",function(){
-//     nav.classList.remove("show-nav")
-//     hamburgerOpen.style.display = "block";
-// })
+hamburgerClose.addEventListener("click",function(){
+    nav.classList.remove("show-nav")
+    hamburgerOpen.style.display = "block";
+})
 
 //*************DESTINATION-SECTION**************//
 
@@ -143,34 +144,111 @@ allCrewBtns.forEach((crewBtn)=>{
 })
 
 
-// //SLIDER - FOR TECHNOLOGY SECTION
-// console.log("Call Me Mr Technology")
+/////////////////////TECHNOLOGY SECTION//////////////////////////////
 
-// const technologys = [
-//     {
-//         id: 1,
-//         img1: "./images/technology/image-launch-vehicle-portrait.jpg",
-//         img2: "./images/technology/image-launch-vehicle-landscape.jpg",
-//         title: "The Terminology...",
-//         name: "Launch vehicle",
-//         text: "A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!"
-//     },
+//SELECTING ITEMS (to be replaced with the contents in the Techs Array)
+const imageContainer = document.querySelector(".technology-image_container")
+const techName = document.querySelector(".technology-name")
+const text = document.querySelector(".technology-text")
 
-//     {
-//         id: 2,
-//         img1: "./images/technology/image-spaceport-portrait.jpg",
-//         img2: "./images/technology/image-spaceport-landscape.jpg",
-//         title: "The Terminology...",
-//         name: "Spaceport",
-//         text: "A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch."
-//     },
+//SELECTING BUTTONS
+const btnsParent = document.querySelector(".tech-btns_container")
+const allTechBtns = document.querySelectorAll(".tech-btn")
+const techBtn1 = document.querySelector(".tech-btn1")
+const techBtn2 = document.querySelector(".tech-btn2")
+const techBtn3 = document.querySelector(".tech-btn3")
 
-//     {
-//         id: 3,
-//         img1: "./images/technology/image-space-capsule-portrait.jpg",
-//         img2: "./images/technology/image-space-capsule-landscape.jpg",
-//         title: "The terminology...",
-//         name: "Space capsule",
-//         text: "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where  you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained."
-//     }
-// ]
+
+//*******ACTIVE BUTTONS*******//
+allTechBtns.forEach((techBtn)=>{
+    techBtn.addEventListener("click", ()=>{
+        btnsParent.querySelector(".active-technology").classList.remove("active-technology")
+
+        techBtn.classList.add("active-technology")
+    })
+})
+
+
+//*******IMAGE SLIDER AND CONTENTS*******//
+const technologys = [
+    {
+        id: 1,
+        img1: "url(./images/technology/image-launch-vehicle-portrait.jpg)",
+        img2: "url(./images/technology/image-launch-vehicle-landscape.jpg)",
+        title: "The Terminology...",
+        name: "Launch vehicle",
+        text: "A launch vehicle or carrier rocket is a rocket-propelled      vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!"
+    },
+
+    {
+        id: 2,
+        img1: "url(./images/technology/image-spaceport-portrait.jpg)",
+        img2: "url(./images/technology/image-spaceport-landscape.jpg)",
+        title: "The Terminology...",
+        name: "Spaceport",
+        text: "A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch."
+    },
+
+    {
+        id: 3,
+        img1: "url(./images/technology/image-space-capsule-portrait.jpg)",
+        img2: "url(./images/technology/image-space-capsule-landscape.jpg)",
+        title: "The terminology...",
+        name: "Space capsule",
+        text: "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where  you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained."
+    }
+]
+
+techBtn1.addEventListener("click", function(){
+    techOne()
+})
+
+techBtn2.addEventListener("click", function(){
+    techTwo()
+})
+
+techBtn3.addEventListener("click", function(){
+    techThree()
+})
+
+function techOne(){
+    techName.textContent = technologys[0].name;
+    text.textContent = technologys[0].text;
+
+    let screenWidth = screen.width;
+    console.log(screen.width)
+    
+    if(screenWidth > 991){
+        imageContainer.style.backgroundImage = technologys[0].img1;
+    } else{
+        imageContainer.style.backgroundImage = technologys[0].img2;
+    }
+}
+
+function techTwo(){
+    techName.textContent = technologys[1].name;
+    text.textContent = technologys[1].text;
+
+    let screenWidth = screen.width;
+    console.log(screen.width)
+
+    if(screenWidth > 991){
+        imageContainer.style.backgroundImage = technologys[1].img1;
+    } else{
+        imageContainer.style.backgroundImage = technologys[1].img2;
+    }
+}
+
+function techThree(){
+    techName.textContent = technologys[2].name;
+    text.textContent = technologys[2].text;
+
+    let screenWidth = screen.width;
+    console.log(screen.width)
+
+    if(screenWidth > 991){
+        imageContainer.style.backgroundImage = technologys[2].img1;
+    } else{
+        imageContainer.style.backgroundImage = technologys[2].img2;
+    }
+}

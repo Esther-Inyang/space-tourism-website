@@ -17,94 +17,91 @@
   <title>Frontend Mentor | Space tourism website</title>
 </head>
 <body>
-  <header>
-    <!-- nav header -->
-    <div class="header-items">
-      <div class="logo-div">
-        <img src="./images/shared/logo.svg" class="logo" alt="logo"/>
+  <section class="home-section">
+    <header>
+      <!-- nav header -->
+      <div class="header-items">
+        <div class="logo-div">
+          <img src="./images/shared/logo.svg" class="logo" alt="logo"/>
+        </div>
+        
+        <div class="nav-toggle">
+          <div class="hamburger-open"></div>
+        </div>
       </div>
-      
-      <div class="nav-toggle">
-        <div class="hamburger-open"></div>
-      </div>
-    </div>
 
-    <div class="line"></div>
-    
-    <nav class="nav">
-      <!-- menu-links -->
-      <div class="hamburger-close"></div>
-      <ul class="menu">
-        <li>
-          <a href="index.html" class="menu-link"><span class="menu-numbers">00</span> Home</a>
-        </li>
-        <li>
-          <a href="destination-moon.html" class="menu-link"><span class="menu-numbers">01</span> Destination</a>
-        </li>
-        <li>
-          <a href="crew.html" class="menu-link"><span class="menu-numbers">02</span> Crew</a>
-        </li>
-        <li>
-          <a href="technology.html" class="menu-link"><span class="menu-numbers">03</span> Technology</a>
-        </li>
-      </ul>
-    </nav>   
-  </header>
-              
-  <main>
-    <div class="home-contents">
-      <section class="about-space__container">
+      <div class="line"></div>
+      
+      <nav class="nav">
+        <!-- menu-links -->
+        <div class="hamburger-close"></div>
+        <ul class="menu">
+          <li>
+            <a href="index.html" class="menu-link"><span class="menu-numbers">00</span> Home</a>
+          </li>
+          <li>
+            <a href="destination-moon.html" class="menu-link"><span class="menu-numbers">01</span> Destination</a>
+          </li>
+          <li>
+            <a href="crew.html" class="menu-link"><span class="menu-numbers">02</span> Crew</a>
+          </li>
+          <li>
+            <a href="technology.html" class="menu-link"><span class="menu-numbers">03</span> Technology</a>
+          </li>
+        </ul>
+      </nav>   
+    </header>
+      
+    <section class="home-contents">
+      <div class="about-space__container">
         <header class="about-space__titles">
           <div class="title-intro">
             <h5>So, you want to travel to</h5>
           </div>
-  
+
           <div class="title-space">
             <h1>space</h1>
           </div>
         </header>
-        
-
+          
         <article class="explore-text">
           <p>Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
         </article>
-      </section>
-
+      </div>
+    
       <!-- <div class="explore-container"> -->
       <div class="explore-link-div">
         <a href="destination.html" class="explore">Explore</a>
       </div>
-    </div>
+    </section>
+  </section>
 
-    <!--********************DESTINTATION SECTION*******************-->
-    <section class="destination-section">
-      
-      <header class="dest-header-section">
-        <h5 class="dest-page-title">
-          <span class="dest-page-title_number">01</span>
-          pick your destination
-        </h5>
-      </header>
-      
-      <section class="dest-menu-section">
-        <div class="dest-planet-menu">
-          <a href="#" class="planet-link dest-planet-active">Moon</a>
-          <a href="#" class="planet-link">Mars</a>
-          <a href="#" class="planet-link">Europa</a>
-          <a href="#" class="planet-link">Titan</a>
-        </div>
-      </section>
+  <!--********************DESTINTATION SECTION*******************-->
+  <section class="destination-section">
+    <header class="dest-header-section">
+      <h5 class="dest-page-title">
+        <span class="dest-page-title_number">01</span>
+        pick your destination
+      </h5>
+    </header>
+    
+    <section class="destination-contents"> <!--Parent-->
+      <div class="dest-planet-menu">
+        <a class="planet-link active-planet-menu" data-id="moon">Moon</a>
+        <a class="planet-link" data-id="mars">Mars</a>
+        <a class="planet-link" data-id="europa">Europa</a>
+        <a class="planet-link" data-id="titan">Titan</a>
+      </div>
 
-      <section class="dest-article-section">
+      <!-- Planet-Moon -->
+      <section class="planet-content active-planet-content" id="moon"> <!--planet1-->
         <div class="dest-image_container">
           <!-- <picture>
             <source type="image/webp" srcset="./images/destination/image-moon.png" 280w> 
-            
           </picture> -->
 
-          <img src="./images/destination/image-moon.png" class="planet-image" alt="image of a moon"/>
+          <img src="./images/destination/image-moon.png" class="planet-image" alt="image of moon"/>
         </div>
-  
         
         <article class="dest-article-container">
           <h1 class="dest-planet-title">moon</h1>
@@ -127,82 +124,167 @@
           </div>
         </article>
       </section>
-    </section>
 
-    <!--********************CREW SECTION*******************-->
-    <section class="crew-section">
-      <header class="crew-page-header">
-        <h5 class="crew-page-title">
-          <span class="crew-page-title_number">02</span>
-          Meet Your Crew
-        </h5>
-      </header>
-
-      <div class="crew-slider_container">
-        <div class="crew-image_container">
-          <!-- <picture>
-            <source type="image/webp" srcset="./images/crew/image-douglas-hurley.webp" 280w>
-            
-            
-          </picture> -->
-
-          <img src="./images/crew/image-douglas-hurley.png" alt="image of a crew member" class="crew-img"/>
+      <!-- Planet-Mars -->
+      <section class="planet-content" id="mars"> 
+        <div class="dest-image_container">
+          <img src="./images/destination/image-mars.png" class="planet-image" alt="image of mars"/>
         </div>
+        
+        <article class="dest-article-container">
+          <h1 class="dest-planet-title">Mars</h1>
+          <p class="dest-planet-text">
+            Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!
+          </p>
+
+          <div class="dest-horizontal-line"></div>
   
-        <div class="crew-contents">
-          <div class="crew-btns_container">
-            <button class="crew-btn crew-btn1 active-crew"></button>
-            <button class="crew-btn crew-btn2"></button>
-            <button class="crew-btn crew-btn3"></button>
-            <button class="crew-btn crew-btn4"></button>
-          </div>
-    
-          <div class="crew-text_container">
-            <h3 class="crew-title">Commander</h3>
-            <h2 class="crew-name">Douglas Hurley</h2>
-            <p class="crew-text">
-              Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.
-            </p>
-          </div>  
-        </div>
-      </div>
-    </section>
-
-    <!--********************TECHNOLOGY SECTION*******************-->
-    <section class="technology-section">
-      <div class="tech-page-title_container">
-        <h5 class="tech-page-title">
-          <span class="tech-page-title_number">03</span>
-          Space Launch 101
-        </h5>
-      </div>
-
-      <div class="technology-slider_container">
-        <div class="technology-image_container">
+          <div class="dest-measurement_contianer">
+            <div class="dest-distance_container">
+              <h5 class="dest-title-distance">AVG. DISTANCE</h5>
+              <h2 class="dest-km">225 mil. km</h2>
+            </div>
           
+            <div class="dest-time_container">
+              <h5 class="dest-travel-time">EST. TRAVEL TIME</h5>
+              <h2 class="dest-travel-duration">9 months</h2>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Planet-Europa -->
+      <section class="planet-content" id="europa"> 
+        <div class="dest-image_container">
+          <img src="./images/destination/image-europa.png" class="planet-image" alt="image of Europa"/>
+        </div>
+        
+        <article class="dest-article-container">
+          <h1 class="dest-planet-title">Europa</h1>
+          <p class="dest-planet-text">
+            The smallest of the four Galilean moons orbiting Jupiter, europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug 
+            wintery cabin.
+          </p>
+
+          <div class="dest-horizontal-line"></div>
+  
+          <div class="dest-measurement_contianer">
+            <div class="dest-distance_container">
+              <h5 class="dest-title-distance">AVG. DISTANCE</h5>
+              <h2 class="dest-km">628 mil. km</h2>
+            </div>
+          
+            <div class="dest-time_container">
+              <h5 class="dest-travel-time">EST. TRAVEL TIME</h5>
+              <h2 class="dest-travel-duration">3 years</h2>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Planet-Titan -->
+      <section class="planet-content" id="titan"> 
+        <div class="dest-image_container">
+          <img src="./images/destination/image-titan.png" class="planet-image" alt="image of Titan"/>
+        </div>
+        
+        <article class="dest-article-container">
+          <h1 class="dest-planet-title">Titan</h1>
+          <p class="dest-planet-text">
+            The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.
+          </p>
+
+          <div class="dest-horizontal-line"></div>
+  
+          <div class="dest-measurement_contianer">
+            <div class="dest-distance_container">
+              <h5 class="dest-title-distance">AVG. DISTANCE</h5>
+              <h2 class="dest-km">1.6 bil. km</h2>
+            </div>
+          
+            <div class="dest-time_container">
+              <h5 class="dest-travel-time">EST. TRAVEL TIME</h5>
+              <h2 class="dest-travel-duration">7 years</h2>
+            </div>
+          </div>
+        </article>
+      </section>
+    </section>
+  </section>
+
+  <!--********************CREW SECTION*******************-->
+  <section class="crew-section">
+    <header class="crew-page-header">
+      <h5 class="crew-page-title">
+        <span class="crew-page-title_number">02</span>
+        Meet Your Crew
+      </h5>
+    </header>
+
+    <div class="crew-slider_container">
+      <div class="crew-image_container">
+        <!--<picture>
+          <source type="image/webp" srcset="./images/crew/image-douglas-hurley.webp" 280w>
+        </picture>--> 
+
+        <img src="./images/crew/image-douglas-hurley.png" alt="image of a crew member" class="crew-img"/>
+      </div>
+
+      <!-- <img src="./images/crew/image-douglas-hurley.png" alt="image of a crew member" class="crew-img"/> -->
+
+      <div class="crew-contents">
+        <div class="crew-btns_container">
+          <button class="crew-btn crew-btn1 active-crew"></button>
+          <button class="crew-btn crew-btn2"></button>
+          <button class="crew-btn crew-btn3"></button>
+          <button class="crew-btn crew-btn4"></button>
         </div>
   
-        <div class="technology-contents">
-          <div class="tech-btns_container">
-            <button class="tech-btn active-technology">1</button>
-            <button class="tech-btn">2</button>
-            <button class="tech-btn">3</button>
-          </div>
-    
-          <div class="technology-text_container">
-            <h3 class="technology-title">The Terminology...</h3>
-            <h2 class="technology-name">Launch vehicle</h2>
-            <p class="technology-text">
-              A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
-              payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
-              WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
-              it's quite an awe-inspiring sight on the launch pad!
-            </p>
-          </div>  
-        </div>
+        <div class="crew-text_container">
+          <h3 class="crew-title">Commander</h3>
+          <h2 class="crew-name">Douglas Hurley</h2>
+          <p class="crew-text">
+            Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.
+          </p>
+        </div>  
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <!--********************TECHNOLOGY SECTION*******************-->
+  <section class="technology-section">
+    <div class="tech-page-title_container">
+      <h5 class="tech-page-title">
+        <span class="tech-page-title_number">03</span>
+        Space Launch 101
+      </h5>
+    </div>
+
+    <div class="technology-slider_container">
+      <div  class="technology-image_container">
+        <!-- <img src="" class="tech-image"> -->
+      </div>
+
+      <div class="technology-contents">
+        <div class="tech-btns_container">
+          <button class="tech-btn tech-btn1 active-technology">1</button>
+          <button class="tech-btn tech-btn2 ">2</button>
+          <button class="tech-btn tech-btn3 ">3</button>
+        </div>
+  
+        <div class="technology-text_container">
+          <h3 class="technology-title">The Terminology...</h3>
+          <h2 class="technology-name">Launch vehicle</h2>
+          <p class="technology-text">
+            A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
+            payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
+            WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
+            it's quite an awe-inspiring sight on the launch pad!
+          </p>
+        </div>  
+      </div>
+    </div>
+  </section>
 
   <script src="script.js"></script>
 </body>

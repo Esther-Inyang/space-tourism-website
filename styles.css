@@ -12,13 +12,18 @@ html{
 
 body{
     box-sizing: border-box;
-    background-image: url("./images/home/background-home-mobile.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
     /* min-height: 100vh; */
     /* padding: 1rem; */
     font-family: 'Barlow', sans-serif;
     position: relative;
+}
+
+.home-section{
+    width: 100%;
+    height: 100vh;
+    background-image: url("./images/home/background-home-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 fonts{
@@ -131,7 +136,7 @@ nav {
 }
 
 /******contents*******/
-.main{
+.home-section{
     display: grid;
     align-items: center;
 }
@@ -200,29 +205,12 @@ nav {
 /************DESTINATION-SECTION***********/
 .destination-section{
     position: relative;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between; 
-    align-items: center;*/
     padding: 3rem 0;
     font-family: 'Barlow', sans-serif;
     background-image: url("./images/destination/background-destination-mobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
-/* 
-.destination-section1,
-.destination-section2{
-    width: 95%;
-    margin: 0 auto;
-    text-align: center;
-} */
-
-/* .dest-header-section{
-    width: 95%;
-    margin: 2rem auto 1rem auto;
-    text-align: center;
-} */
 
 .dest-page-title{
     color: #ffffff;
@@ -251,18 +239,20 @@ nav {
     margin: 1rem 0 2.8rem 0;
 }
 
+.dest-planet-menu > a:not(:last-child){
+    margin: 0 2rem 0 0;
+}
+
 .planet-link{
     color: #a2a3a8;
-    text-decoration: none;
     text-transform: uppercase;
     font-weight: 500;
     font-size: 1.2rem;
     padding: .7rem 0;
+    outline: none;
+    border: none;
+    cursor: pointer;
     position: relative;
-}
-
-.dest-planet-menu > a:not(:last-child){
-    margin: 0 2rem 0 0;
 }
 
 .planet-link:hover {
@@ -345,7 +335,7 @@ nav {
     text-transform: uppercase;
 }
 
-.dest-planet-active::after{
+.active-planet-menu::after{
     content: '';
     position: absolute;
     width: 80%;
@@ -397,6 +387,7 @@ nav {
 .crew-img{
     width: 22rem;
     height: 25rem;
+    z-index: 1;
 }
 
 .crew-btns_container{
@@ -488,7 +479,8 @@ nav {
 }
 
 /* Image-slider */
-.tech-image_container{
+
+.technology-image_container{
     width: 100%;
     height: 20rem;
     background-image: url('images/technology/image-launch-vehicle-landscape.jpg');
@@ -655,7 +647,7 @@ nav {
 }
 
 @media screen and (min-width: 768px){
-    body{
+    .home-section{
         background-image: url("./images/home/background-home-tablet.jpg");
     }
 
@@ -768,17 +760,6 @@ nav {
         background-image: url("./images/destination/background-destination-tablet.jpg");
     }
 
-    /* .destination-section2{
-        display: grid;
-        place-items: center;
-    } */
-
-    /* .dest-header-section{
-        width: 100%;
-        margin: 2rem 0 5rem 0;
-        text-align: left;
-    } */
-
     .dest-page-title{
         font-size: 2.2rem;
     }
@@ -850,6 +831,7 @@ nav {
     /************CREW-SECTION***********/
     .crew-section{
         background-image: url("./images/crew/background-crew-tablet.jpg");
+        position: relative;
     }
 
     .crew-page-header{
@@ -924,7 +906,7 @@ nav {
         font-weight: 600; 
     }
 
-    .tech-image_container{
+    .technology-image_container{
         height: 35rem;
     }
 
@@ -954,7 +936,7 @@ nav {
 @media screen and (min-width: 992px){
     /*Styles for HOME (Index.html)*/
 
-    body{
+    .home-section{
         padding: 0;
         background-image: url("./images/home/background-home-desktop.jpg");
     }
@@ -1056,36 +1038,20 @@ nav {
 
     /************DESTINATION-SECTION***********/
     .destination-section{
-        /* flex-direction: row;
-        justify-content: space-between;
-        align-items: center; 
-        margin-top: 0;
-        padding-top: 10rem;*/
         padding: 4rem 20rem 4rem 15rem;
         background-image: url("./images/destination/background-destination-desktop.jpg");
     }
 
-    .dest-header-section{
-
-        /* width: 70%;
-        margin: 0 auto 8rem auto;
-        text-align: center; */
-    }
-
-    .dest-menu-section{
-        width: 85%;
-        text-align: right;
-    }
-
     .dest-planet-menu{
-        margin: 7rem 0 4rem 0;
+        text-align: right;
+        margin: 7rem 15rem 4rem 0;
     }
 
     .planet-link{
         font-size: 1.3rem;  
     }
 
-    .dest-article-section{
+    .planet-content{
         display: flex;
         gap: 2rem;
         justify-content: space-between;
@@ -1146,8 +1112,9 @@ nav {
 
     /************CREW-SECTION***********/
     .crew-section{
+        min-height: 100vh;
         background-image: url("./images/crew/background-crew-desktop.jpg");
-        padding: 5rem 2rem 5rem 15rem; /*changed 0 2 0 15 rems*/
+        padding: 5rem 0 5rem 15rem; /*changed 0 2 0 15 rems*/
     }
 
     .crew-page-header{
@@ -1186,7 +1153,7 @@ nav {
     }
 
     .crew-title{
-        margin-top: 10rem; /*changed 12rem*/
+        margin-top: 8rem; /*changed 12rem*/
     }
 
     .crew-name{
@@ -1225,7 +1192,7 @@ nav {
         align-items: center;
     }
 
-    .tech-image_container{
+    .technology-image_container{
         height: 50rem;
         background-image: url("images/technology/image-launch-vehicle-portrait.jpg");
     }
@@ -1234,7 +1201,7 @@ nav {
         display: flex;
     }
 
-    .tech-image_container{
+    .technology-image_container{
         flex-basis: 35%;
     }
 
