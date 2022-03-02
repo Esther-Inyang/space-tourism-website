@@ -1,39 +1,106 @@
 
 /////////////////////////HOME///////////////////////////
-// toggle - toggles class
 
-//get classes
+//ACTIVE HOME MENU
+// const menuParent = document.querySelector(".menu")
+// const menuLinks = document.querySelectorAll(".menu-link")
+
+// menuLinks.forEach((menuLink) =>{
+//     menuLink.addEventListener("click", ()=>{
+//         menuParent.querySelector(".active-menu-link").classList.remove("active-menu-link")
+
+//         menuLink.classList.add("active-menu-link");
+//     })
+// })
+
+
+//TOGGLE HOME MENU
+
+//selecting menu
 const navToggle = document.querySelector('.nav-toggle')
 const nav = document.querySelector('.nav')
 const hamburgerClose = document.querySelector('.hamburger-close')
 const hamburgerOpen = document.querySelector('.hamburger-open')
 
 //TOGGLE NAV menu - ON SMALLER SCREENS
-navToggle.addEventListener("click", function(){
-                // toggle nav
-    // nav.classList.toggle("show-nav")
+navToggle.addEventListener("click", ()=>{
     nav.classList.add("show-nav")  
     hamburgerOpen.style.display = "none";
 })
 
-hamburgerClose.addEventListener("click",function(){
+hamburgerClose.addEventListener("click", ()=>{
     nav.classList.remove("show-nav")
     hamburgerOpen.style.display = "block";
 })
 
 //*************DESTINATION-SECTION**************//
 
-// //for active planet-menu
-// const menu = document.querySelector(".menu")
-// const menuLinks = document.querySelectorAll(".menu-link")
+//ACTIVE PLANET MENU
 
-// menuLinks.forEach((menuLink)=>{
-//     menuLink.addEventListener("click", ()=>{
-//         menu.querySelector(".active").classList.remove("active")
-//         menuLink.classList.add("active");
+const planetMenuParent = document.querySelector(".planet-menu-container")
+const planetMenus = document.querySelectorAll(".planet-menu")
+
+// planetMenus.forEach((planetMenu)=>{
+//     planetMenu.addEventListener("click",()=>{
+//         planetMenuParent.querySelector(".active-planet-menu").classList.remove("active-planet-menu")
+
+//         planetMenu.classList.add("active-planet-menu")
 //     })
-    
 // })
+
+const destinationContents = document.querySelector(".destination-contents")
+const planetContents = document.querySelectorAll(".planet-content")
+
+destinationContents.addEventListener("click", (e)=>{
+    //when clicked, get the data-id
+    const id = e.target.dataset.id;
+
+    //if it has id, get all btns, remove SPECIFIC active from anywhere it's seen, add it to only the target clicked
+    if(id){
+        //FOR PLANET MENU
+        planetMenus.forEach((planetMenu)=>{
+            planetMenu.classList.remove("active-planet-menu")
+    
+            e.target.classList.add("active-planet-menu")
+        })
+
+        //FOR PLANET CONTENTS
+        planetContents.forEach((planetContent)=>{
+            planetContent.classList.remove("active-planet-content")
+        })
+
+        const idElement = document.getElementById(id);
+        idElement.classList.add("active-planet-content")
+    } 
+
+})
+
+const mainPage = document.querySelector(".main-page")
+const pageSections = document.querySelectorAll(".page-section")
+const menuLinks = document.querySelectorAll(".menu-link")
+
+mainPage.addEventListener("click", (e)=>{
+    //when clicked, get the data-id
+    const pageId = e.target.dataset.id;
+
+    if(pageId){
+        //FOR HOME MENU
+        menuLinks.forEach((menuLink)=>{
+            menuLink.classList.remove("active-menu-link")
+            e.target.classList.add("active-menu-link")
+        })
+
+        //FOR PLANET CONTENTS
+        pageSections.forEach((pageSection)=>{
+            pageSection.classList.remove("active-page-section")
+        })
+
+        const pageIdElement = document.getElementById(pageId);
+        pageIdElement.classList.add("active-page-section")
+    }
+
+})
+
 
 //*************CREW-SECTION**************//
 

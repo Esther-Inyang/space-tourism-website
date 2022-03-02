@@ -109,7 +109,8 @@ nav {
     list-style-type: none;
 }
 
-.menu-link {
+.menu-link { 
+    position: relative;
     text-decoration: none;
     color: #ffffff;
     font-size: 1.3rem;
@@ -118,20 +119,31 @@ nav {
     display: block;
     padding: 1rem .2rem; 
     letter-spacing: .3rem;
-    position: relative;
+    cursor: pointer;
 }
 
 .menu-link:hover {
     transition: all .3s ease-in; 
 }
 
-.menu-link:hover::after{
+
+.active-menu-link::after{
     content: '';
     position: absolute;
-    width: 80%;
+    width: 100%;
     height: 0.3rem;
     left: 0;
     bottom: 0;
+    background-color: #ffffff;
+}
+
+.menu-link:hover::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.3rem;
+    left: 0;
+    bottom: 0; 
     background-color: #ffffff;
 }
 
@@ -235,15 +247,15 @@ nav {
     margin: 2rem 0 1rem 0;
 }
 
-.dest-planet-menu{
+.planet-menu-container{
     margin: 1rem 0 2.8rem 0;
 }
 
-.dest-planet-menu > a:not(:last-child){
+.planet-menu-container > a:not(:last-child){
     margin: 0 2rem 0 0;
 }
 
-.planet-link{
+.planet-menu{
     color: #a2a3a8;
     text-transform: uppercase;
     font-weight: 500;
@@ -255,11 +267,11 @@ nav {
     position: relative;
 }
 
-.planet-link:hover {
+.planet-menu:hover {
     color: #ffffff;
 }
 
-.planet-link:hover::after{
+.planet-menu:hover::after{
     content: '';
     position: absolute;
     width: 70%;
@@ -335,6 +347,9 @@ nav {
     text-transform: uppercase;
 }
 
+/* For JavaScript */
+
+/* planet menu */
 .active-planet-menu::after{
     content: '';
     position: absolute;
@@ -344,6 +359,25 @@ nav {
     bottom: 0;
     background-color: #ffffff;
 }
+
+.planet-content{
+    display: none;
+}
+
+.active-planet-content{
+    display: block;
+} 
+
+/* for main contents */
+.page-section{
+    display: none;
+}
+
+.active-page-section{
+    display: block;
+}
+
+
 
 /************CREW-SECTION***********/
 .crew-section{
@@ -406,6 +440,7 @@ nav {
     outline: none;
     border: none;
     background-color: #a2a3a8;
+    cursor: pointer;
 }
 
 .crew-btn:hover{
@@ -508,6 +543,7 @@ nav {
     border: none;
     background-color: transparent;
     border: 1px solid rgb(162, 163, 168, 0.5);
+    cursor: pointer;
 }
 
 .tech-btn:hover{
@@ -591,15 +627,15 @@ nav {
         margin: 2rem 0 3rem 0;
     }
     
-    .dest-planet-menu{   
+    .planet-menu-container{   
         margin: 1rem 0 4rem 0;
     }
     
-    .dest-planet-menu{   
+    .planet-menu-container{   
         margin: 1rem 0 2.5rem 0;
     }
 
-    .planet-link{
+    .planet-menu{
         font-size: 1.5rem;
     }
 
@@ -704,16 +740,10 @@ nav {
         font-size: 1.2rem;
         padding: 3.5rem 0;
         line-height: 0;
-        border-bottom: 4px solid transparent;
     }
 
     .menu-link:hover {
         transition: none; 
-        border-bottom: 4px solid #ffffff;
-    }
-
-    .menu-link:hover::after{
-        display: none;
     }
 
     /***********Home*************/
@@ -776,11 +806,11 @@ nav {
         margin: 0 0 4rem 0;
     }
 
-    .dest-planet-menu{
+    .planet-menu-container{
         margin: 1rem 0 5rem 0;
     }
 
-    .planet-link{
+    .planet-menu{
         font-size: 2.6rem;
     }
 
@@ -1042,21 +1072,26 @@ nav {
         background-image: url("./images/destination/background-destination-desktop.jpg");
     }
 
-    .dest-planet-menu{
+    .destination-contents{
+        margin-top: 3rem;
+    }
+
+    .planet-menu-container{
         text-align: right;
         margin: 7rem 15rem 4rem 0;
     }
 
-    .planet-link{
+    .planet-menu{
         font-size: 1.3rem;  
     }
 
-    .planet-content{
+    /* For JavaScript */
+    .active-planet-content{
         display: flex;
         gap: 2rem;
         justify-content: space-between;
-
     }
+    /* Js end */
 
     .dest-image_container{
         width: 40%;
