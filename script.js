@@ -9,7 +9,7 @@
 //     menuLink.addEventListener("click", ()=>{
 //         menuParent.querySelector(".active-menu-link").classList.remove("active-menu-link")
 
-//         menuLink.classList.add("active-menu-link");
+//     menuLink.classList.add("active-menu-link");
 //     })
 // })
 
@@ -33,8 +33,36 @@ hamburgerClose.addEventListener("click", ()=>{
     hamburgerOpen.style.display = "block";
 })
 
-//*************DESTINATION-SECTION**************//
+//*************HOME-SECTION**************//
+const mainPage = document.querySelector(".main-page")
+const pages = document.querySelectorAll(".page")
+const menuLinks = document.querySelectorAll(".menu-link")
 
+mainPage.addEventListener("click", (e)=>{
+    //when clicked, get the data-id
+    const pageId = e.target.dataset.id;
+
+    if(pageId){
+        //FOR HOME MENU
+        menuLinks.forEach((menuLink)=>{
+            menuLink.classList.remove("active-menu-link")
+            e.target.classList.add("active-menu-link")
+        })
+
+        //FOR PLANET CONTENTS
+        pages.forEach((page)=>{
+            page.classList.remove("active-page")
+        })
+
+        const pageIdElement = document.getElementById(pageId)
+        pageIdElement.classList.add("active-page")
+    }
+
+})
+
+
+
+//*************DESTINATION-SECTION**************//
 //ACTIVE PLANET MENU
 
 const planetMenuParent = document.querySelector(".planet-menu-container")
@@ -51,59 +79,36 @@ const planetMenus = document.querySelectorAll(".planet-menu")
 const destinationContents = document.querySelector(".destination-contents")
 const planetContents = document.querySelectorAll(".planet-content")
 
+
 destinationContents.addEventListener("click", (e)=>{
     //when clicked, get the data-id
     const id = e.target.dataset.id;
 
-    //if it has id, get all btns, remove SPECIFIC active from anywhere it's seen, add it to only the target clicked
+    //if it has id, get all btns with id, remove active class from anywhere it's seen, add it to only the target id clicked
     if(id){
         //FOR PLANET MENU
+
         planetMenus.forEach((planetMenu)=>{
             planetMenu.classList.remove("active-planet-menu")
-    
             e.target.classList.add("active-planet-menu")
         })
 
         //FOR PLANET CONTENTS
+
+        //remove ACTIVE class from the class
         planetContents.forEach((planetContent)=>{
             planetContent.classList.remove("active-planet-content")
         })
 
+        //add ACTIVE class to the targeted ID
         const idElement = document.getElementById(id);
         idElement.classList.add("active-planet-content")
     } 
 
 })
 
-const mainPage = document.querySelector(".main-page")
-const pageSections = document.querySelectorAll(".page-section")
-const menuLinks = document.querySelectorAll(".menu-link")
-
-mainPage.addEventListener("click", (e)=>{
-    //when clicked, get the data-id
-    const pageId = e.target.dataset.id;
-
-    if(pageId){
-        //FOR HOME MENU
-        menuLinks.forEach((menuLink)=>{
-            menuLink.classList.remove("active-menu-link")
-            e.target.classList.add("active-menu-link")
-        })
-
-        //FOR PLANET CONTENTS
-        pageSections.forEach((pageSection)=>{
-            pageSection.classList.remove("active-page-section")
-        })
-
-        const pageIdElement = document.getElementById(pageId);
-        pageIdElement.classList.add("active-page-section")
-    }
-
-})
-
 
 //*************CREW-SECTION**************//
-
 //Array of Crew Members
 const crews = [
     {

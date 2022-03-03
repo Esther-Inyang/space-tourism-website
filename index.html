@@ -18,42 +18,40 @@
 </head>
 <body>
   <div class="main-page">
-    <section class="home-section">
-      <header>
-        <!-- nav header -->
-        <div class="header-items">
-          <div class="logo-div">
-            <img src="./images/shared/logo.svg" class="logo" alt="logo"/>
-          </div>
-          
-          <div class="nav-toggle">
-            <div class="hamburger-open"></div>
-          </div>
+    <header>
+      <!-- nav header -->
+      <div class="logo-container">
+        <img src="./images/shared/logo.svg" class="logo" alt="logo"/>
+        
+        <div class="nav-toggle">
+          <div class="hamburger-open"></div>
         </div>
+      </div>
 
-        <div class="line"></div>
-        
-        <nav class="nav">
-          <!-- menu-links -->
-          <div class="hamburger-close"></div>
-          <ul class="menu">
-            <li>
-              <a class="menu-link active-menu-link" data-id="home"><span class="menu-numbers">00</span> Home</a>
-            </li>
-            <li>
-              <a class="menu-link" data-id="destination"><span class="menu-numbers">01</span> Destination</a>
-            </li>
-            <li>
-              <a class="menu-link" data-id="crew"><span class="menu-numbers">02</span> Crew</a>
-            </li>
-            <li>
-              <a class="menu-link" data-id="technology"><span class="menu-numbers">03</span> Technology</a>
-            </li>
-          </ul>
-        </nav>   
-      </header>
-        
-      <section class="home-contents page-section active-page-section" id="home">
+      <div class="line"></div>
+      
+      <nav class="nav">
+        <!-- menu-links -->
+        <div class="hamburger-close"></div>
+        <ul class="menu">
+          <li>
+            <a class="menu-link active-menu-link" data-id="home"><span class="menu-numbers">00</span> Home</a>
+          </li>
+          <li>
+            <a class="menu-link" data-id="destination"><span class="menu-numbers">01</span> Destination</a>
+          </li>
+          <li>
+            <a class="menu-link" data-id="crew"><span class="menu-numbers">02</span> Crew</a>
+          </li>
+          <li>
+            <a class="menu-link" data-id="technology"><span class="menu-numbers">03</span> Technology</a>
+          </li>
+        </ul>
+      </nav>   
+    </header>
+
+    <section class="home-section page active-page" id="home">   
+      <section class="home-contents">
         <div class="about-space__container">
           <header class="about-space__titles">
             <div class="title-intro">
@@ -78,7 +76,8 @@
     </section>
 
     <!--********************DESTINTATION SECTION*******************-->
-    <section class="destination-section page-section" id="destination">
+  
+    <section class="destination-section page" id="destination">
       <header class="dest-header-section">
         <h5 class="dest-page-title">
           <span class="dest-page-title_number">01</span>
@@ -215,7 +214,7 @@
     </section>
 
     <!--********************CREW SECTION*******************-->
-    <section class="crew-section page-section" id="crew">
+    <section class="crew-section page" id="crew">
       <header class="crew-page-header">
         <h5 class="crew-page-title">
           <span class="crew-page-title_number">02</span>
@@ -252,7 +251,7 @@
     </section>
 
     <!--********************TECHNOLOGY SECTION*******************-->
-    <section class="technology-section page-section" id="technology">
+    <section class="technology-section page" id="technology">
       <div class="tech-page-title_container">
         <h5 class="tech-page-title">
           <span class="tech-page-title_number">03</span>
