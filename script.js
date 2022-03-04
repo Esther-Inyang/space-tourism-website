@@ -14,6 +14,30 @@
 // })
 
 
+//const destinationContents = document.querySelector(".destination-contents")
+// planetContent.classList.add("active-planet-content")
+
+//data-id="destination" or class="dest-menu"
+//active-menu-link
+
+const explore = document.querySelector(".explore")
+const destMenu = document.querySelector(".dest-menu")
+const homeMenu = document.querySelector(".home-menu")
+const homeSection = document.querySelector(".home-section")
+const destinationSection = document.querySelector(".destination-section")
+
+explore.addEventListener("click", ()=>{
+    //add active to destination menu
+    destMenu.classList.add("active-menu-link")
+    //remove active from other sibling (home-menu)
+    homeMenu.classList.remove("active-menu-link")
+
+    //Add Active to contents
+    homeSection.classList.remove("active-page")
+    destinationSection.classList.add("active-page")
+})
+
+
 //TOGGLE HOME MENU
 
 //selecting menu
@@ -42,7 +66,7 @@ mainPage.addEventListener("click", (e)=>{
     //when clicked, get the data-id
     const pageId = e.target.dataset.id;
 
-    if(pageId){
+    if(pageId){  
         //FOR HOME MENU
         menuLinks.forEach((menuLink)=>{
             menuLink.classList.remove("active-menu-link")
@@ -57,55 +81,155 @@ mainPage.addEventListener("click", (e)=>{
         const pageIdElement = document.getElementById(pageId)
         pageIdElement.classList.add("active-page")
     }
-
 })
-
 
 
 //*************DESTINATION-SECTION**************//
-//ACTIVE PLANET MENU
 
+//ACTIVE PLANET MENU
 const planetMenuParent = document.querySelector(".planet-menu-container")
 const planetMenus = document.querySelectorAll(".planet-menu")
 
-// planetMenus.forEach((planetMenu)=>{
-//     planetMenu.addEventListener("click",()=>{
-//         planetMenuParent.querySelector(".active-planet-menu").classList.remove("active-planet-menu")
+planetMenus.forEach((planetMenu)=>{
+    planetMenu.addEventListener("click",()=>{
+        planetMenuParent.querySelector(".active-planet-menu").classList.remove("active-planet-menu")
 
-//         planetMenu.classList.add("active-planet-menu")
-//     })
-// })
-
-const destinationContents = document.querySelector(".destination-contents")
-const planetContents = document.querySelectorAll(".planet-content")
-
-
-destinationContents.addEventListener("click", (e)=>{
-    //when clicked, get the data-id
-    const id = e.target.dataset.id;
-
-    //if it has id, get all btns with id, remove active class from anywhere it's seen, add it to only the target id clicked
-    if(id){
-        //FOR PLANET MENU
-
-        planetMenus.forEach((planetMenu)=>{
-            planetMenu.classList.remove("active-planet-menu")
-            e.target.classList.add("active-planet-menu")
-        })
-
-        //FOR PLANET CONTENTS
-
-        //remove ACTIVE class from the class
-        planetContents.forEach((planetContent)=>{
-            planetContent.classList.remove("active-planet-content")
-        })
-
-        //add ACTIVE class to the targeted ID
-        const idElement = document.getElementById(id);
-        idElement.classList.add("active-planet-content")
-    } 
-
+        planetMenu.classList.add("active-planet-menu")
+    })
 })
+
+//ACTIVE PLANET CONTENTS
+const planets = [
+    {   
+        id: 1,
+        img: "./images/destination/image-moon.png",
+        title: "Moon",
+        text: "See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.",
+        kilometer: "384,400 km",
+        travelTime: "3 Days"
+    },
+    {   
+        id: 2,
+        img: "./images/destination/image-mars.png",
+        title: "Mars",
+        text: "Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!",
+        kilometer: "225 mil. km",
+        travelTime: "9 months"
+    },
+    {   
+        id: 3,
+        img: "./images/destination/image-europa.png",
+        title: "Europa",
+        text: "The smallest of the four Galilean moons orbiting Jupiter, europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.",
+        kilometer: "628 mil. km",
+        travelTime: "3 Years"
+    },
+    {   
+        id: 4,
+        img: "./images/destination/image-titan.png",
+        title: "Titan",
+        text: "The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.",
+        kilometer: "1.6 bil. km",
+        travelTime: "7 years"
+    }
+]
+
+//Selecting Planet Items
+const planetImg = document.querySelector(".planet-image")
+const planetTitle = document.querySelector(".dest-planet-title")
+const planetText  = document.querySelector(".dest-planet-text")
+const planetKm = document.querySelector(".dest-km")
+const planetTravelTime = document.querySelector(".dest-travel-duration")
+
+const planetMoon = document.querySelector(".planet-moon")
+const planetMars = document.querySelector(".planet-mars")
+const planetEuropa = document.querySelector(".planet-europa")
+const planetTitan = document.querySelector(".planet-titan")
+
+//for each planet in the array
+//moon
+function moonContents(){
+    planetImg.src = planets[0].img;
+    planetTitle.textContent = planets[0].title;
+    planetText.textContent = planets[0].text;
+    planetKm.textContent = planets[0].kilometer;
+    planetTravelTime.textContent = planets[0].travelTime;
+}
+
+planetMoon.addEventListener("click",()=>{
+    moonContents()
+})
+
+//mars
+function marsContents(){
+    planetImg.src = planets[1].img;
+    planetTitle.textContent = planets[1].title;
+    planetText.textContent = planets[1].text;
+    planetKm.textContent = planets[1].kilometer;
+    planetTravelTime.textContent = planets[1].travelTime;
+}
+
+planetMars.addEventListener("click",()=>{
+    marsContents()
+})
+
+//Europa
+function europaContents(){
+    planetImg.src = planets[2].img;
+    planetTitle.textContent = planets[2].title;
+    planetText.textContent = planets[2].text;
+    planetKm.textContent = planets[2].kilometer;
+    planetTravelTime.textContent = planets[2].travelTime;
+}
+
+planetEuropa.addEventListener("click",()=>{
+    europaContents()
+})
+
+//Titan
+function titanContents(){
+    planetImg.src = planets[3].img;
+    planetTitle.textContent = planets[3].title;
+    planetText.textContent = planets[3].text;
+    planetKm.textContent = planets[3].kilometer;
+    planetTravelTime.textContent = planets[3].travelTime;
+}
+
+planetTitan.addEventListener("click",()=>{
+    titanContents()
+})
+
+
+//*********USING EVENT(e) TO SHOW ACTIVE PLANET MENU AND  CONTENTS**********//
+
+// const destinationContents = document.querySelector(".destination-contents")
+// const planetContents = document.querySelectorAll(".planet-content")
+
+// destinationContents.addEventListener("click", (e)=>{
+//     //when clicked, get the data-id
+//     const id = e.target.dataset.id;
+
+//     //if it has id, get all btns with id, remove active class from anywhere it's seen, add it to only the target id clicked
+//     if(id){
+//         //FOR PLANET MENU
+
+//         planetMenus.forEach((planetMenu)=>{
+//             planetMenu.classList.remove("active-planet-menu")
+//             e.target.classList.add("active-planet-menu")
+//         })
+
+//         //FOR PLANET CONTENTS
+
+//         //remove ACTIVE class from the class
+//         planetContents.forEach((planetContent)=>{
+//             planetContent.classList.remove("active-planet-content")
+//         })
+
+//         //add ACTIVE class to the targeted ID
+//         const idElement = document.getElementById(id);
+//         idElement.classList.add("active-planet-content")
+//     } 
+// })
 
 
 //*************CREW-SECTION**************//
@@ -169,7 +293,6 @@ function crewTwo(){
     crewText.textContent = crews[1].text;
 }
 
-
 function crewThree(){
     crewImg.src = crews[2].img;
     crewTitle.textContent = crews[2].title;
@@ -184,7 +307,7 @@ function crewFour(){
     crewText.textContent = crews[3].text;
 }
 
-//buttons
+//adding click event to the crew slider buttons
 crewBtn1.addEventListener("click",()=>{
     crewOne()
 })

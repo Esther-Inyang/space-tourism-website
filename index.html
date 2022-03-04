@@ -35,10 +35,10 @@
         <div class="hamburger-close"></div>
         <ul class="menu">
           <li>
-            <a class="menu-link active-menu-link" data-id="home"><span class="menu-numbers">00</span> Home</a>
+            <a class="menu-link home-menu active-menu-link" data-id="home"><span class="menu-numbers">00</span> Home</a>
           </li>
           <li>
-            <a class="menu-link" data-id="destination"><span class="menu-numbers">01</span> Destination</a>
+            <a class="menu-link dest-menu" data-id="destination"><span class="menu-numbers">01</span> Destination</a>
           </li>
           <li>
             <a class="menu-link" data-id="crew"><span class="menu-numbers">02</span> Crew</a>
@@ -70,7 +70,7 @@
       
         <!-- <div class="explore-container"> -->
         <div class="explore-link-div">
-          <a href="destination.html" class="explore">Explore</a>
+          <a href="#destination" class="explore">Explore</a>
         </div>
       </section>
     </section>
@@ -86,15 +86,22 @@
       </header>
       
       <section class="destination-contents"> <!--Parent-->
-        <div class="planet-menu-container">
+        <!-- <div class="planet-menu-container">
           <a class="planet-menu active-planet-menu" data-id="moon">Moon</a>
           <a class="planet-menu" data-id="mars">Mars</a>
           <a class="planet-menu" data-id="europa">Europa</a>
           <a class="planet-menu" data-id="titan">Titan</a>
+        </div> -->
+
+        <div class="planet-menu-container">
+          <a class="planet-menu planet-moon active-planet-menu">Moon</a>
+          <a class="planet-menu planet-mars">Mars</a>
+          <a class="planet-menu planet-europa">Europa</a>
+          <a class="planet-menu planet-titan">Titan</a>
         </div>
 
         <!-- Planet-Moon -->
-        <div class="planet-content active-planet-content" id="moon"> <!--planet1-->
+        <div class="planet-content active-planet-content"> <!--planet1-->
           <div class="dest-image_container">
             <!-- <picture>
               <source type="image/webp" srcset="./images/destination/image-moon.png" 280w> 
@@ -114,18 +121,18 @@
             <div class="dest-measurement_contianer">
               <div class="dest-distance_container">
                 <h5 class="dest-title-distance">AVG. DISTANCE</h5>
-                <h2 class="dest-km">384,400 KM</h2>
+                <h2 class="dest-km">384,400 km</h2>
               </div>
             
               <div class="dest-time_container">
                 <h5 class="dest-travel-time">EST. TRAVEL TIME</h5>
-                <h2 class="dest-travel-duration">3 DAYS</h2>
+                <h2 class="dest-travel-duration">3 Days</h2>
               </div>
             </div>
           </article>
         </div>
 
-        <!-- Planet-Mars -->
+        <!-- Planet-Mars--
         <div class="planet-content" id="mars"> 
           <div class="dest-image_container">
             <img src="./images/destination/image-mars.png" class="planet-image" alt="image of mars"/>
@@ -153,7 +160,7 @@
           </article>
         </div>
 
-        <!-- Planet-Europa -->
+        !-- Planet-Europa --
         <div class="planet-content" id="europa"> 
           <div class="dest-image_container">
             <img src="./images/destination/image-europa.png" class="planet-image" alt="image of Europa"/>
@@ -162,8 +169,7 @@
           <article class="dest-article-container">
             <h1 class="dest-planet-title">Europa</h1>
             <p class="dest-planet-text">
-              The smallest of the four Galilean moons orbiting Jupiter, europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug 
-              wintery cabin.
+              The smallest of the four Galilean moons orbiting Jupiter, europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.
             </p>
 
             <div class="dest-horizontal-line"></div>
@@ -182,7 +188,7 @@
           </article>
         </div>
 
-        <!-- Planet-Titan -->
+        !-- Planet-Titan --
         <div class="planet-content" id="titan"> 
           <div class="dest-image_container">
             <img src="./images/destination/image-titan.png" class="planet-image" alt="image of Titan"/>
@@ -208,7 +214,7 @@
               </div>
             </div>
           </article>
-        </div>
+        </div> -->
 
       </section>
     </section>
