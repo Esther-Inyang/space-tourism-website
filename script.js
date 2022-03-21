@@ -2,23 +2,6 @@
 /////////////////////////HOME///////////////////////////
 
 //ACTIVE HOME MENU
-// const menuParent = document.querySelector(".menu")
-// const menuLinks = document.querySelectorAll(".menu-link")
-
-// menuLinks.forEach((menuLink) =>{
-//     menuLink.addEventListener("click", ()=>{
-//         menuParent.querySelector(".active-menu-link").classList.remove("active-menu-link")
-
-//     menuLink.classList.add("active-menu-link");
-//     })
-// })
-
-
-//const destinationContents = document.querySelector(".destination-contents")
-// planetContent.classList.add("active-planet-content")
-
-//data-id="destination" or class="dest-menu"
-//active-menu-link
 
 const explore = document.querySelector(".explore")
 const destMenu = document.querySelector(".dest-menu")
@@ -41,13 +24,12 @@ explore.addEventListener("click", ()=>{
 //TOGGLE HOME MENU
 
 //selecting menu
-const navToggle = document.querySelector('.nav-toggle')
+// const navToggle = document.querySelector('.nav-toggle')
 const nav = document.querySelector('.nav')
 const hamburgerClose = document.querySelector('.hamburger-close')
 const hamburgerOpen = document.querySelector('.hamburger-open')
 
-//TOGGLE NAV menu - ON SMALLER SCREENS
-navToggle.addEventListener("click", ()=>{
+hamburgerOpen.addEventListener("click", ()=>{
     nav.classList.add("show-nav")  
     hamburgerOpen.style.display = "none";
 })
@@ -56,6 +38,17 @@ hamburgerClose.addEventListener("click", ()=>{
     nav.classList.remove("show-nav")
     hamburgerOpen.style.display = "block";
 })
+
+// //TOGGLE NAV menu - ON SMALLER SCREENS
+// navToggle.addEventListener("click", ()=>{
+//     nav.classList.add("show-nav")  
+//     hamburgerOpen.style.display = "none";
+// })
+
+// hamburgerClose.addEventListener("click", ()=>{
+//     nav.classList.remove("show-nav")
+//     hamburgerOpen.style.display = "block";
+// })
 
 //*************HOME-SECTION**************//
 const mainPage = document.querySelector(".main-page")
@@ -198,39 +191,6 @@ function titanContents(){
 planetTitan.addEventListener("click",()=>{
     titanContents()
 })
-
-
-//*********USING EVENT(e) TO SHOW ACTIVE PLANET MENU AND  CONTENTS**********//
-
-// const destinationContents = document.querySelector(".destination-contents")
-// const planetContents = document.querySelectorAll(".planet-content")
-
-// destinationContents.addEventListener("click", (e)=>{
-//     //when clicked, get the data-id
-//     const id = e.target.dataset.id;
-
-//     //if it has id, get all btns with id, remove active class from anywhere it's seen, add it to only the target id clicked
-//     if(id){
-//         //FOR PLANET MENU
-
-//         planetMenus.forEach((planetMenu)=>{
-//             planetMenu.classList.remove("active-planet-menu")
-//             e.target.classList.add("active-planet-menu")
-//         })
-
-//         //FOR PLANET CONTENTS
-
-//         //remove ACTIVE class from the class
-//         planetContents.forEach((planetContent)=>{
-//             planetContent.classList.remove("active-planet-content")
-//         })
-
-//         //add ACTIVE class to the targeted ID
-//         const idElement = document.getElementById(id);
-//         idElement.classList.add("active-planet-content")
-//     } 
-// })
-
 
 //*************CREW-SECTION**************//
 //Array of Crew Members
@@ -394,6 +354,12 @@ const technologys = [
     }
 ]
 
+window.addEventListener("DOMContentLoaded", () =>{
+    techOne()
+    techTwo()
+    techThree()
+})
+
 techBtn1.addEventListener("click", function(){
     techOne()
 })
@@ -411,11 +377,15 @@ function techOne(){
     text.textContent = technologys[0].text;
 
     let screenWidth = screen.width;
-    console.log(screen.width)
+    // console.log(screen.width)
     
-    if(screenWidth > 991){
+    if(screenWidth >= 992){  //from 992 up
         imageContainer.style.backgroundImage = technologys[0].img1;
-    } else{
+    } else if(screenWidth >= 768){ //between 768 - 992
+        imageContainer.style.height = "42rem";
+        imageContainer.style.backgroundImage = technologys[0].img2;
+    }
+    else{  //below 992
         imageContainer.style.backgroundImage = technologys[0].img2;
     }
 }
@@ -425,11 +395,15 @@ function techTwo(){
     text.textContent = technologys[1].text;
 
     let screenWidth = screen.width;
-    console.log(screen.width)
+    // console.log(screen.width)
 
-    if(screenWidth > 991){
+    if(screenWidth >= 992){  //from 992 up
         imageContainer.style.backgroundImage = technologys[1].img1;
-    } else{
+    } else if(screenWidth >= 768){ //between 768 - 992
+        imageContainer.style.height = "42rem";
+        imageContainer.style.backgroundImage = technologys[1].img2;
+    }
+    else{  //below 992
         imageContainer.style.backgroundImage = technologys[1].img2;
     }
 }
@@ -439,11 +413,15 @@ function techThree(){
     text.textContent = technologys[2].text;
 
     let screenWidth = screen.width;
-    console.log(screen.width)
+    // console.log(screen.width)
 
-    if(screenWidth > 991){
+    if(screenWidth >= 992){  //from 992 up
         imageContainer.style.backgroundImage = technologys[2].img1;
-    } else{
+    } else if(screenWidth >= 768){ //between 768 - 992
+        imageContainer.style.height = "42rem";
+        imageContainer.style.backgroundImage = technologys[2].img2;
+    }
+    else{  //below 992
         imageContainer.style.backgroundImage = technologys[2].img2;
     }
 }

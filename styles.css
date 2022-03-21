@@ -40,32 +40,22 @@ fonts{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 2rem;
 }
 
-.logo {
+.logo{
     height: 4rem;
     z-index: 1;
 }
 
 .hamburger-open,
 .hamburger-close{
-    width: 2.4rem;
-    height: 2.1rem;
-    background-size: 2.4rem 2.1rem;
-    text-indent: -9999px;
+    height: 3rem;
+    z-index: 1;
+    cursor: pointer;
 }
 
-.hamburger-open{
-    background: url("./images/shared/icon-hamburger.svg");
-    background-repeat: no-repeat;
-    display: block;
-} 
-
 .hamburger-close{
-    background: url("./images/shared/icon-close.svg");
-    background-repeat: no-repeat;
-    display: block; /*use javascript to toggle*/
     position: absolute;
     right: 0;
     margin: 2rem;
@@ -78,13 +68,14 @@ fonts{
     filter: brightness(0) invert(1);
 }
 
-.nav-toggle {
-    transition: all .3s linear;
-    cursor: pointer;
+/********menu section********/
+.main-page{
+    width: 100%;
+    height: 100vh;
+    position: relative;
 }
 
-/********menu section********/
-nav {
+.nav {
     width: 65%;
     height: 0;
     overflow: hidden;
@@ -160,7 +151,7 @@ nav {
 
 .home-contents{
     padding: 1rem;
-    margin-top: 1rem;
+    margin-top: 5rem;
     text-align: center;
 }
 
@@ -224,7 +215,7 @@ nav {
     position: absolute;
     top: 0;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     padding: 3rem 0;
     font-family: 'Barlow', sans-serif;
     background-image: url("./images/destination/background-destination-mobile.jpg");
@@ -249,13 +240,24 @@ nav {
     letter-spacing: 3px;
 }
 
+.dest-image_container{
+    padding: 1.5rem;
+}
+
 .planet-image{
     width: 16rem;
     height: 16rem;
     margin: 2rem 0 1rem 0;
 }
 
+.dest-header-section{
+    margin-top: 8rem;
+    text-align: center;
+}
+
 .planet-menu-container{
+    position: absolute;
+    top: 44%;
     margin: 1rem 0 2.8rem 0;
 }
 
@@ -296,12 +298,20 @@ nav {
     font-weight: lighter;
     letter-spacing: .5rem;
     margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.destination-contents,
+.dest-image_container{
+    display: grid;
+    place-items: center;
 }
 
 .dest-article-container{
     width: 100%;
     margin: 0 auto;
     text-align: center;
+    padding: 2rem;
 }
 
 .dest-planet-text{
@@ -414,6 +424,7 @@ nav {
     font-weight: lighter;
     text-transform: uppercase;
     font-family: 'Barlow Condensed', sans-serif;
+    margin-top: 7rem;
 }
 
 .crew-page-title_number{
@@ -432,8 +443,7 @@ nav {
 
 .crew-img{
     width: 22rem;
-    height: 25rem;
-    z-index: 1;
+    height: 25rem;  
 }
 
 .crew-btns_container{
@@ -496,7 +506,8 @@ nav {
     position: absolute;
     top: 0;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 6rem 0 1rem 0;
     background-image: url("./images/technology/background-technology-mobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -504,7 +515,7 @@ nav {
 
 .tech-page-title_container{
     width: 95%;
-    margin: 2rem auto 3rem auto; /*changed bottom from 1rem*/
+    margin: 3rem auto 0rem auto; 
     text-align: center;
 }
 
@@ -529,11 +540,12 @@ nav {
 
 .technology-image_container{
     width: 100%;
-    height: 20rem;
+    height: 28rem;
+    margin-top: 3rem;
     background-image: url('images/technology/image-launch-vehicle-landscape.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
 }
 
 .tech-btns_container{
@@ -689,10 +701,26 @@ nav {
     }
 
     /************TECHNOLOGY-SECTION***********/
+
+    .tech-image{
+        height: 33rem;
+    }
+
     .technology-title{
         margin-top: 2.5rem;
     }
+
+    .technology-image_container{
+        height: 33rem;
+        margin-top: 3rem;
+    }
 }
+/* 
+@media screen and (min-width: 540px) and (max-height:720px){
+    .technology-image_container{
+        height: 27rem;
+    }
+} */
 
 @media screen and (min-width: 768px){
     .home-section{
@@ -722,7 +750,7 @@ nav {
         display: none;
     }
 
-    nav{
+    .nav{
         width: 60%; 
         height: auto; 
         display: flex; 
@@ -731,7 +759,7 @@ nav {
         justify-content: center; 
         padding: 0;
         transition: none;
-        overflow: none;
+        overflow: hidden;
         background-color: rgba(33, 36, 48, 0.92);
     }
 
@@ -766,6 +794,7 @@ nav {
         justify-content: center; 
         align-items: center; 
         flex-direction: column;
+        margin-top: 4rem;
     }
 
     .title-intro{
@@ -803,8 +832,10 @@ nav {
     }
 
     .dest-page-title{
-        margin-top: 10rem;
-        font-size: 2.2rem;
+        margin-top: 14rem;
+        font-size: 2rem;
+        text-align: left;
+        padding-left: 3rem;
     }
 
     .dest-page-title_number{
@@ -819,7 +850,12 @@ nav {
         margin: 0;
     }
 
+    .dest-image_container{
+        margin: 4rem 0 3rem 0;
+    }
+
     .planet-menu-container{
+        top: 50%;
         margin: 1rem 0 5rem 0;
     }
 
@@ -829,10 +865,13 @@ nav {
 
     .dest-planet-title{
         font-size: 8rem;
+        margin-top: 5rem;
     }
 
     .dest-article-container{
         width: 97%;
+        display: grid;
+        place-items: center;
     }
 
     .dest-planet-text{
@@ -880,6 +919,10 @@ nav {
         text-align: left;
         margin-top: 3rem;
     }
+
+    .crew-page-title{
+        margin-top: 12rem;
+    }
         
     .crew-page-title_number{
         font-size: 2rem; 
@@ -903,16 +946,17 @@ nav {
     }
 
     .crew-img{
-        width: 50rem;
-        height: 55rem;
+        width: 45rem;
+        height: 45rem;
         position: absolute;
         bottom: 0;
+        left: 50%;
         transform: translateX(-50%);
     }
 
     .crew-title{
         margin-top: 3rem;
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     .crew-name{
@@ -924,6 +968,10 @@ nav {
         margin: 0 auto;
         font-size: 2rem;
         line-height: 3.5rem;
+    }
+
+    .crew-btns_container{
+        margin-top: 1rem;
     }
 
     /************TECHNOLOGY-SECTION***********/
@@ -942,26 +990,32 @@ nav {
 
     .tech-page-title{
         font-size: 2rem;
-        font-weight: 600; 
+        font-weight: 600;
+        margin-top: 7rem; 
     }
 
     .technology-image_container{
-        height: 35rem;
+        height: 40rem;
+        margin-top: 5rem;
     }
 
     .tech-btn{
         width: 4.5rem;
         height: 4.5rem;
-        margin-top: 2rem;
+        margin-top: .5rem;
     }
 
     .technology-title{
-        margin-top: 5rem;
+        margin-top: 3rem;
         font-size: 2.5rem;
     }
 
     .technology-name{
         font-size: 4rem;
+    }
+
+    .technology-text_container{
+        padding-top: 0;
     }
 
     .technology-text{
@@ -999,7 +1053,7 @@ nav {
         background-color: rgb(89, 90, 95);
     }
 
-    nav{
+    .nav{
         padding: 0 5rem; 
         margin-top: 3rem;
     }
@@ -1025,6 +1079,7 @@ nav {
         padding: 48px; 
         text-align: left;
         flex-direction: row;
+        margin-top: 1rem;
     }
 
     .about-space__container{
@@ -1085,9 +1140,27 @@ nav {
         margin-top: 3rem;
     }
 
+    .dest-header-section{
+        margin-top: 0;
+        text-align: left;
+    }
+
+    .dest-page-title{
+        margin-top: 10rem;
+        margin-bottom: 1rem;
+    }
+
     .planet-menu-container{
+        width: 44.5%;
+        /* position: relative; */
+        top: 17%;
+        right: 0;
         text-align: right;
-        margin: 7rem 15rem 4rem 0;
+        margin: 10rem 0 1rem 0;
+        padding-right: 0;
+        display: flex;
+        align-content: flex-end;
+        /* padding-right: 16rem; */
     }
 
     .planet-menu{
@@ -1096,6 +1169,7 @@ nav {
 
     /* For JavaScript */
     .active-planet-content{
+        margin-top: 8rem;
         display: flex;
         gap: 2rem;
         justify-content: space-between;
@@ -1113,15 +1187,23 @@ nav {
         height: 27rem;
     }
 
+    .destination-contents,
+    .dest-image_container{
+        display: block;
+        /* place-items: center; */
+    }
+
     .dest-article-container{
         width: 40%;
         text-align: left;
         margin: 0;
-        padding: 3rem 1rem 1rem 1rem;
+        padding: 3rem 1rem 1rem 0;
+        display: block;
     }
 
     .dest-planet-title{
         font-size: 5.5rem;
+        margin-top: 2rem;
     }
 
     .dest-planet-text{
@@ -1166,7 +1248,7 @@ nav {
 
     .crew-page-title{
         margin-top: 10rem;
-    }
+    } 
 
     .crew-slider_container{
         display: flex;
@@ -1183,9 +1265,21 @@ nav {
         flex-basis: 30%;
     }
 
+/*     
+    .crew-img{
+        width: 45rem;
+        height: 45rem;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+    } */
+    
     .crew-img{
         width: 40rem;
         height: 47rem;
+        left: 80%;
+        bottom: 0;
+        /* position: relative; */
     }
 
     .crew-btns_container{
@@ -1200,7 +1294,7 @@ nav {
     }
 
     .crew-title{
-        margin-top: 4rem; /*changed 12rem*/
+        margin-top: 5rem; /*changed 12rem*/
     }
 
     .crew-name{
@@ -1219,7 +1313,7 @@ nav {
     }
 
     .tech-page-title_container{
-        margin-top: 15rem;
+        margin-top: 13rem;
     }
 
     .tech-page-title_number,
@@ -1232,28 +1326,31 @@ nav {
     }
 
     .technology-slider_container{
+        height: auto;
         display: flex;
         gap: 2rem;
         flex-direction: row-reverse;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
     }
 
     .technology-contents{
         display: flex;
         flex-basis: 65%;
+        align-items: center;
+        justify-content: center;
     }
 
     .technology-image_container{
-        flex-basis: 35%;
-        height: 40rem;
+        flex-basis: 30%;
+        height: 42rem;
         background-image: url("images/technology/image-launch-vehicle-portrait.jpg");
     }
 
     .tech-btns_container{
         /* margin: 5rem 0 0 0; */
         width: 50%;
-        margin-top: 5rem;
+        margin-top: 0; /*changed 5rem*/
         flex-direction: column;
         justify-content: flex-start;
     }
@@ -1264,7 +1361,7 @@ nav {
 
     .technology-name{
         font-size: 6rem;
-        margin: 1.5rem 0 2.5rem 0;
+        margin: 0; /*changed 1.5rem 0 2.5rem*/
     }
 
     .technology-text{
