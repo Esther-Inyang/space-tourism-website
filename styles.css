@@ -184,7 +184,7 @@ fonts{
 
 .explore-link-div{
     width: 95%;
-    height: 21rem;
+    height: 18rem;
     padding: .5rem;
     position: relative;
 }
@@ -194,7 +194,7 @@ fonts{
     color: #0b0d17;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 6rem 2.5rem;
+    padding: 6rem 3rem;
     border-radius: 100%;
     position: absolute;
     top: 50%;

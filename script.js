@@ -29,6 +29,19 @@ const nav = document.querySelector('.nav')
 const hamburgerClose = document.querySelector('.hamburger-close')
 const hamburgerOpen = document.querySelector('.hamburger-open')
 
+//Close Nav Menu if outside Nav is clicked
+window.addEventListener("mouseup", function(e){
+
+    const nav = document.querySelector('.nav')
+    const hamburgerOpen = document.querySelector('.hamburger-open')
+    const hamburgerClose = document.querySelector('.hamburger-close')
+
+    if(e.target !== nav && e.target !== hamburgerOpen){
+        nav.classList.remove("show-nav")
+        hamburgerOpen.style.display = "block";
+    }
+})
+
 hamburgerOpen.addEventListener("click", ()=>{
     nav.classList.add("show-nav")  
     hamburgerOpen.style.display = "none";
@@ -39,16 +52,6 @@ hamburgerClose.addEventListener("click", ()=>{
     hamburgerOpen.style.display = "block";
 })
 
-// //TOGGLE NAV menu - ON SMALLER SCREENS
-// navToggle.addEventListener("click", ()=>{
-//     nav.classList.add("show-nav")  
-//     hamburgerOpen.style.display = "none";
-// })
-
-// hamburgerClose.addEventListener("click", ()=>{
-//     nav.classList.remove("show-nav")
-//     hamburgerOpen.style.display = "block";
-// })
 
 //*************HOME-SECTION**************//
 const mainPage = document.querySelector(".main-page")
