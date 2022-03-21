@@ -12,8 +12,6 @@ html{
 
 body{
     box-sizing: border-box;
-    /* min-height: 100vh; */
-    /* padding: 1rem; */
     font-family: 'Barlow', sans-serif;
     position: relative;
 }
@@ -22,7 +20,7 @@ body{
     position: absolute;
     top: 0;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url("./images/home/background-home-mobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -71,7 +69,7 @@ fonts{
 /********menu section********/
 .main-page{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
 }
 
@@ -402,7 +400,7 @@ fonts{
     position: absolute;
     top: 0;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url("./images/crew/background-crew-mobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
