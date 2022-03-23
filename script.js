@@ -31,15 +31,15 @@ const hamburgerOpen = document.querySelector('.hamburger-open')
 
 //Close Nav Menu if outside Nav is clicked
 window.addEventListener("mouseup", function(e){
-
     const nav = document.querySelector('.nav')
-    const hamburgerOpen = document.querySelector('.hamburger-open')
-    const hamburgerClose = document.querySelector('.hamburger-close')
-
-    if(e.target !== nav && e.target !== hamburgerOpen){
+    if(e.target !== nav){
         nav.classList.remove("show-nav")
-        hamburgerOpen.style.display = "block";
     }
+
+    let screenWidth = screen.width;
+    if(screenWidth < 768){  //smaller than 768
+        hamburgerOpen.style.display = "block";
+    } 
 })
 
 hamburgerOpen.addEventListener("click", ()=>{
@@ -287,6 +287,8 @@ crewBtn4.addEventListener("click",()=>{
     crewFour()
 })
 
+
+
 //change active button
 const crewBtnContainer = document.querySelector(".crew-btns_container")
 const allCrewBtns = document.querySelectorAll(".crew-btn")
@@ -385,7 +387,7 @@ function techOne(){
     if(screenWidth >= 992){  //from 992 up
         imageContainer.style.backgroundImage = technologys[0].img1;
     } else if(screenWidth >= 768){ //between 768 - 992
-        imageContainer.style.height = "42rem";
+        // imageContainer.style.height = "42rem";
         imageContainer.style.backgroundImage = technologys[0].img2;
     }
     else{  //below 992

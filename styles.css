@@ -141,20 +141,12 @@ fonts{
     background-color: #ffffff;
 }
 
-/******contents*******/
-.home-section{
-    display: grid;
-    align-items: center;
-}
+/******home-contents*******/
 
 .home-contents{
     padding: 1rem;
     margin-top: 5rem;
     text-align: center;
-}
-
-.about-space__container{
-    padding: 1rem;
 }
 
 .title-intro h5{
@@ -251,12 +243,6 @@ fonts{
 .dest-header-section{
     margin-top: 8rem;
     text-align: center;
-}
-
-.planet-menu-container{
-    position: absolute;
-    top: 44%;
-    margin: 1rem 0 2.8rem 0;
 }
 
 .planet-menu-container > a:not(:last-child){
@@ -459,6 +445,7 @@ fonts{
     border-radius: 50%;
     outline: none;
     border: none;
+    user-select: none;
     background-color: #a2a3a8;
     cursor: pointer;
 }
@@ -521,7 +508,7 @@ fonts{
     color: #ffffff;
     font-size: 1.5rem; 
     letter-spacing: 3px;
-    line-height: 2rem; /*to help breakword*/
+    line-height: 2rem; 
     overflow-wrap: break-word; 
     font-weight: lighter;
     text-transform: uppercase;
@@ -562,6 +549,7 @@ fonts{
     font-size: 1.5rem;
     color: #ffffff;
     outline: none;
+    user-select: none;
     border: none;
     background-color: transparent;
     border: 1px solid rgb(162, 163, 168, 0.5);
@@ -646,7 +634,7 @@ fonts{
     .planet-image{
         width: 20rem;
         height: 20rem;
-        margin: 2rem 0 3rem 0;
+        margin: 3rem 0 0 0;
     }
     
     .planet-menu-container{   
@@ -713,12 +701,6 @@ fonts{
         margin-top: 3rem;
     }
 }
-/* 
-@media screen and (min-width: 540px) and (max-height:720px){
-    .technology-image_container{
-        height: 27rem;
-    }
-} */
 
 @media screen and (min-width: 768px){
     .home-section{
@@ -853,7 +835,6 @@ fonts{
     }
 
     .planet-menu-container{
-        top: 50%;
         margin: 1rem 0 5rem 0;
     }
 
@@ -880,7 +861,7 @@ fonts{
     .dest-horizontal-line{
         width: 80%;
         height: .3rem; 
-        margin: 6rem 0 4rem 0;
+        margin: 3rem 0 4rem 0;
     }
 
     .dest-measurement_contianer{
@@ -1026,7 +1007,6 @@ fonts{
 
 @media screen and (min-width: 992px){
     /*Styles for HOME (Index.html)*/
-
     .home-section{
         padding: 0;
         background-image: url("./images/home/background-home-desktop.jpg");
@@ -1072,23 +1052,41 @@ fonts{
         margin-right: 0;
     }
 
+    .home-page-contents, 
+    .dest-page-contents,
+    .crew-page-contents,
+    .tech-page-contents{
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .dest-article-container{
+        margin-top: -8rem;
+    }
+
     /*contents*/
     .home-contents{
-        padding: 48px; 
+        width: 100%;
+        padding: 0 15rem 0 15rem; 
         text-align: left;
         flex-direction: row;
+        justify-content: space-between;
         margin-top: 1rem;
+    }
+
+    .title-intro{
+        margin-top: 18rem;
     }
 
     .about-space__container{
         width: 60%; 
         height: auto; 
         padding: 0; 
-    }
-
-    .title-intro{
-        margin-top: 18rem;
-    }
+    } 
 
     .title-space{
         margin: 1rem 0; 
@@ -1130,7 +1128,7 @@ fonts{
 
     /************DESTINATION-SECTION***********/
     .destination-section{
-        padding: 4rem 20rem 4rem 15rem;
+        padding: 0 20rem 0 15rem; 
         background-image: url("./images/destination/background-destination-desktop.jpg");
     }
 
@@ -1141,6 +1139,7 @@ fonts{
     .dest-header-section{
         margin-top: 0;
         text-align: left;
+        margin-left: -80rem;
     }
 
     .dest-page-title{
@@ -1150,15 +1149,11 @@ fonts{
 
     .planet-menu-container{
         width: 44.5%;
-        /* position: relative; */
-        top: 17%;
-        right: 0;
         text-align: right;
-        margin: 10rem 0 1rem 0;
+        margin: 0;
         padding-right: 0;
         display: flex;
         align-content: flex-end;
-        /* padding-right: 16rem; */
     }
 
     .planet-menu{
@@ -1167,7 +1162,7 @@ fonts{
 
     /* For JavaScript */
     .active-planet-content{
-        margin-top: 8rem;
+        margin-top: 0;
         display: flex;
         gap: 2rem;
         justify-content: space-between;
@@ -1175,7 +1170,7 @@ fonts{
     /* Js end */
 
     .dest-image_container{
-        width: 40%;
+        width: 50%;
         margin-top: 3rem;
         padding: 1rem;
     }
@@ -1188,14 +1183,14 @@ fonts{
     .destination-contents,
     .dest-image_container{
         display: block;
-        /* place-items: center; */
     }
 
     .dest-article-container{
         width: 40%;
         text-align: left;
         margin: 0;
-        padding: 3rem 1rem 1rem 0;
+        /* padding: 3rem 1rem 1rem 0; */
+        padding: 0;
         display: block;
     }
 
@@ -1237,15 +1232,15 @@ fonts{
     /************CREW-SECTION***********/
     .crew-section{
         background-image: url("./images/crew/background-crew-desktop.jpg");
-        padding: 5rem 0 5rem 15rem; /*changed 0 2 0 15 rems*/
+        padding: 0 0 0 15rem; /*changed 0 2 0 15 rems*/
     }
 
     .crew-page-header{
-        margin-top: 0; /*changed Margin 7rem*/
+        margin-top: 0; 
     }
 
     .crew-page-title{
-        margin-top: 10rem;
+        margin: 10rem 0 0 -1rem;
     } 
 
     .crew-slider_container{
@@ -1262,22 +1257,12 @@ fonts{
     .crew-image_container{
         flex-basis: 30%;
     }
-
-/*     
-    .crew-img{
-        width: 45rem;
-        height: 45rem;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-    } */
     
     .crew-img{
         width: 40rem;
         height: 47rem;
         left: 80%;
         bottom: 0;
-        /* position: relative; */
     }
 
     .crew-btns_container{
@@ -1292,7 +1277,7 @@ fonts{
     }
 
     .crew-title{
-        margin-top: 5rem; /*changed 12rem*/
+        margin-top: 5rem; 
     }
 
     .crew-name{
@@ -1341,14 +1326,18 @@ fonts{
 
     .technology-image_container{
         flex-basis: 30%;
-        height: 42rem;
+        height: 35rem;
+        margin-top: 0;
         background-image: url("images/technology/image-launch-vehicle-portrait.jpg");
     }
 
+    .tech-image{
+        height: 100%;
+    }
+
     .tech-btns_container{
-        /* margin: 5rem 0 0 0; */
         width: 50%;
-        margin-top: 0; /*changed 5rem*/
+        margin-top: 0; 
         flex-direction: column;
         justify-content: flex-start;
     }
@@ -1359,7 +1348,7 @@ fonts{
 
     .technology-name{
         font-size: 6rem;
-        margin: 0; /*changed 1.5rem 0 2.5rem*/
+        margin: 0;
     }
 
     .technology-text{
@@ -1367,4 +1356,177 @@ fonts{
         text-align: left;
         margin: 0;
     }
+}
+
+@media screen and (min-width: 1024px) and (max-height:600px){
+
+    .destination-section{
+        padding: 0 15rem 0 10rem;
+    }
+
+    .dest-header-section{
+        margin-left: -50rem;
+    }
+}
+
+@media only screen and (min-width: 1400px){
+
+    /* GLOBAL HEADER STYLES */
+    .nav{
+        width: 50%;
+    }
+
+    .line{
+        width: 44%; 
+        left: 15rem;
+    }
+
+    .menu-link{
+        font-size: 2rem;
+    }
+
+    /* HOME SECTION */
+    
+    .home-contents{
+        padding-left: 20rem;
+    }
+
+    .title-space h1{
+        font-size: 15rem;
+        margin: 5rem 0;
+    }
+
+    .title-intro h5{
+        font-size: 5rem;
+    }
+
+    .explore-text{
+        width: 60rem;
+    }
+
+    .explore-text p{
+        font-size: 3rem;
+        line-height: 5rem;
+    }
+
+    .explore-link-div{  
+        padding-right: 15rem;
+        margin-top: 30rem; 
+    }
+
+    .explore-link-div a{
+        font-size: 4.5rem; 
+        padding: 14rem 6rem;  
+    }
+
+    /* DESTINATION SECTION */
+
+    .dest-header-section{
+        margin-left: -100rem;
+    }
+
+    .dest-page-title,
+    .dest-page-title_number{
+        font-size: 3rem;
+        letter-spacing: 1rem;
+        margin-top: 20rem;
+    }
+
+    .active-planet-content{
+        margin: 0;
+        padding: 0;
+    }
+
+    .planet-image{
+        width: 70%;
+        height: 80%;
+        margin-top: 10rem;
+    }
+        
+    .planet-menu{
+        font-size: 2rem;
+    }
+    
+    .dest-planet-title{
+        font-size: 7rem;
+        margin-top: 8rem;
+    }
+
+    .dest-article-container{
+        width: 34%;
+        text-align: left;
+        margin: 0;
+    }
+
+    .dest-planet-text{
+        font-size: 2.5rem;
+        line-height: 4.5rem;
+    }
+
+    .dest-title-distance,
+    .dest-travel-time{
+        font-size: 2rem;
+    }
+
+    .dest-km,
+    .dest-travel-duration{
+        font-size: 1.82rem;
+    }
+
+    /* CREW SECTION */
+
+    .crew-page-header{
+        margin: 0 0 7rem -5rem;
+    }
+
+    .crew-page-title_number,
+    .crew-page-title,
+    .tech-page-title_number,
+    .tech-page-title{
+        font-size: 3rem;
+        letter-spacing: 1rem;
+    }
+
+    .crew-text,
+    .technology-text{
+        width: 60%;
+        font-size: 3rem;
+        line-height: 4.5rem;
+    }
+
+    .crew-btn{
+        width: 2rem;
+        height: 2rem
+    }
+
+    .crew-img{
+        width: 70rem;
+        height: 85rem;
+        left: 75%;
+    }
+
+    /* TECHNOLOGY SECTION */
+    .tech-page-title{
+        margin-left: 2.5rem;
+    }
+
+    .tech-btns_container{
+        gap: 6rem;
+    }
+
+    .tech-btn{
+        font-size: 2rem;
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .technology-name{
+        font-size: 6.5rem;
+        margin: 3rem 0;
+    }
+
+    .technology-image_container{
+        height: 65rem;
+    }
+
 }
