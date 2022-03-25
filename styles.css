@@ -1416,7 +1416,7 @@ fonts{
 
     .explore-link-div a{
         font-size: 4.5rem; 
-        padding: 14rem 6rem;  
+        padding: 12rem 4rem;  
     }
 
     /* DESTINATION SECTION */
@@ -1437,10 +1437,16 @@ fonts{
         padding: 0;
     }
 
+    .dest-image_container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .planet-image{
-        width: 70%;
-        height: 80%;
-        margin-top: 10rem;
+        width: 52%;
+        height: 42rem; 
+        margin-top: 4rem; 
     }
         
     .planet-menu{
@@ -1501,7 +1507,7 @@ fonts{
 
     .crew-img{
         width: 70rem;
-        height: 85rem;
+        height: 75%;
         left: 75%;
     }
 

@@ -1,6 +1,6 @@
 
 /////////////////////////HOME///////////////////////////
-
+console.log(screen.height)
 //ACTIVE HOME MENU
 
 const explore = document.querySelector(".explore")
